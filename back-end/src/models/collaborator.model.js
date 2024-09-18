@@ -54,9 +54,9 @@ const schema = new mongoose.Schema(
   }
 );
 
-const SchemaCollaborator =  mongoose.models.Collaborator || mongoose.models("Collaborator", schema);
+const SchemaCollaborator = mongoose.models.Collaborator || mongoose.model("Collaborator", schema);
 
-module.exports = SchemaCollaborator;
+export default SchemaCollaborator;
 
 /**
  * shape of displacement (onibus, carro, bike, ....)

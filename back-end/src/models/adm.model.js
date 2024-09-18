@@ -28,4 +28,4 @@ const schema = new mongoose.Schema(
 
 const SchemaAdm = mongoose.models.Adms || mongoose.model("Adms", schema);
 
-module.exports = SchemaAdm;
+export default SchemaAdm;

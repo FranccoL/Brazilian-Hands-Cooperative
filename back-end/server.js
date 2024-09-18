@@ -1,6 +1,9 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import { routerCollaborator } from "./src/routes/collaborator.routes";
+import { routerAdm } from "./src/routes/adm.routes";
+i
 
 dotenv.config();
 
@@ -14,6 +17,15 @@ app.use(express.json());
 app.get("/", (_, res) => {
   return res.send("Hello Brazilian");
 });
+
+
+//routes Adm
+app.use('/', routerAdm)
+
+//routes Collaborator
+app.use('/', routerCollaborator)
+
+
 
 // Se a conexão for bem-sucedida, inicia o servidor
 app.listen(process.env.PORT, () => {
