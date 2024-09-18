@@ -1,35 +1,47 @@
-import express from "express"; // 
+import express from "express";
 import cors from "cors";
+import dotenv from "dotenv";
 
-const app = express();  
-const PORT = 3000
+dotenv.config();
 
+const app = express();
 
-app.use(cors())
-app.use(express.json())
+// Middleware para CORS e JSON
+app.use(cors());
+app.use(express.json());
 
+// Rota básica para teste
+app.get("/", (_, res) => {
+  return res.send("Hello Brazilian");
+});
 
-app.get('/', (_, res)=>{
-    return res.send('Hello Brazilian')
-})
-
-
-app.listen(PORT, ()=>{
-    console.log(`Rodando na port ${PORT}`)
-})
+// Se a conexão for bem-sucedida, inicia o servidor
+app.listen(process.env.PORT, () => {
+  console.log(`Conectado ao banco de dados.`);
+  console.log(`Servidor rodando na porta ${process.env.PORT}`);
+});
 
 /**
- * Inicio básico do projeto
+ * TESTE PARA VER SE BANCO ESTA CONECTANDO:
+ * import { connectDB } from "./src/configDB/connectDB.js";
  * 
- * * npm init -y 
- * * npm install express --save
- * * npm i swagger-autogen swagger-ui-express mongoose mongoose-to-swagger cors dotenv
- * * install nodemon --save-dev
  * 
- * *****  no packege.js
- * 
- *  *  "type":"module",  colocado para poder usar import ao inves de require
- * 
- *  para rodar o projeto npm run dev
- * 
+ * const startServer = async () => {
+ *  try {
+ *      // Tenta conectar ao banco de dados
+ *     await connectDB();
+ *
+ *    // Se a conexão for bem-sucedida, inicia o servidor
+ *    app.listen(process.env.PORT, () => {
+ *       console.log(`Conectado ao banco de dados.`);
+ *       console.log(`Servidor rodando na porta ${process.env.PORT}`);
+ *  });
+ * } catch (error) {
+ *    console.error("Erro ao iniciar o servidor:", error);
+ *}
+ *};
+ *
+ * Chama a função para iniciar o servidor
+ *startServer();
+ *
  */
