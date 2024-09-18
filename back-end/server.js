@@ -1,9 +1,9 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import { routerCollaborator } from "./src/routes/collaborator.routes";
-import { routerAdm } from "./src/routes/adm.routes";
-i
+import { routerCollaborator } from "./src/routes/collaborator.routes.js";
+import { routerAdm } from "./src/routes/adm.routes.js";
+
 
 dotenv.config();
 
