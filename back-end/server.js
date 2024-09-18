@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import { routerCollaborator } from "./src/routes/collaborator.routes.js";
 import { routerAdm } from "./src/routes/adm.routes.js";
+import { routerClient } from "./src/routes/client.routes.js";
 
 
 dotenv.config();
@@ -21,6 +22,9 @@ app.get("/", (_, res) => {
 
 //routes Adm
 app.use('/', routerAdm)
+
+//routes client
+app.use('/', routerClient)
 
 //routes Collaborator
 app.use('/', routerCollaborator)
