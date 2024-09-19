@@ -1,4 +1,5 @@
 import Client from "../models/client.model.js";
+import { validationError } from "../validatorError/validationError.js";
 
 export const getAllClient = async (_, res) => {
   try {
@@ -6,7 +7,7 @@ export const getAllClient = async (_, res) => {
 
     return res.status(200).json(clients);
   } catch (error) {
-    console.log(error);
+    validationError(res, error)
   }
 };
 
@@ -18,7 +19,7 @@ export const getClientById = async (req, res) => {
 
     return res.status(200).json(client);
   } catch (error) {
-    console.log(error);
+    validationError(res, error)
   }
 };
 
@@ -30,7 +31,7 @@ export const createClient = async (req, res) => {
 
     return res.status(200).json(client);
   } catch (error) {
-    console.log(error);
+    validationError(res, error)
   }
 };
 
@@ -43,7 +44,7 @@ export const updateClient = async (req, res) => {
 
     return res.status(200).json(client)
   } catch (error) {
-    console.log(error);
+    validationError(res, error)
   }
 };
 
@@ -55,6 +56,6 @@ export const deleteClient = async (req, res) => {
 
     return res.status(200).json(deleteClient)
   } catch (error) {
-    console.log(error);
+   validationError(res, error)
   }
 };

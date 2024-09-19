@@ -1,11 +1,12 @@
 import Collaborator from "../models/collaborator.model.js";
+import { validationError } from "../validatorError/validationError.js";
 
 export const getAllCollaborator = async (_, res) => {
   try {
     let client = await Collaborator.find();
     return res.status(200).json(client);
   } catch (error) {
-    console.log(error);
+    validationError(res, error);
   }
 };
 
@@ -17,7 +18,7 @@ export const getCollaboratorId = async (req, res) => {
 
     return res.status(200).json(collaborator);
   } catch (error) {
-    console.log(error);
+    validationError(res, error);
   }
 };
 
@@ -29,7 +30,7 @@ export const createCollaborator = async (req, res) => {
 
     return res.status(200).json(collaborator);
   } catch (error) {
-    console.log(error);
+    validationError(res, error);
   }
 };
 
@@ -44,7 +45,7 @@ export const updateCollabarator = async (req, res) => {
 
     return res.status(200).json(collaborator);
   } catch (error) {
-    console.log(error);
+    validationError(res, error);
   }
 };
 
@@ -52,10 +53,10 @@ export const removeCollaborator = async (req, res) => {
   try {
     const { id } = req.params;
 
-    const deleteCollaborator = await Collaborator.findByIdAndDelete(id)
+    const deleteCollaborator = await Collaborator.findByIdAndDelete(id);
 
-    return res.status(200).json(deleteCollaborator)
+    return res.status(200).json(deleteCollaborator);
   } catch (error) {
-    console.log(error);
+    validationError(res, error);
   }
 };

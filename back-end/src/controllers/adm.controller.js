@@ -7,7 +7,7 @@ export const getAdm = async (_, res) => {
 
     return res.status(200).json(adm);
   } catch (error) {
-    validationError(res, error)
+    validationError(res, error);
   }
 };
 
@@ -19,7 +19,7 @@ export const getByIdAdm = async (req, res) => {
 
     return res.status(200).json(adm);
   } catch (error) {
-   validationError(res, error)
+    validationError(res, error);
   }
 };
 
@@ -31,7 +31,7 @@ export const createAdm = async (req, res) => {
 
     return res.status(200).json(adm);
   } catch (error) {
-   validationError(res, error)
+    validationError(res, error);
   }
 };
 
@@ -44,17 +44,17 @@ export const updateAdm = async (req, res) => {
 
     return res.status(200).json(adm);
   } catch (error) {
-    validationError(res, error)
+    validationError(res, error);
   }
 };
 
 export const removeAdm = async (req, res) => {
   try {
     const { id } = req.params;
-    const deleteAdm = await Adm.findByIdAndDelete(id)
+    const deleteAdm = await Adm.findByIdAndDelete(id);
 
-    return res.status(200).json(deleteAdm)
+    return res.status(200).json(deleteAdm);
   } catch (error) {
-    validationError(res, error)
+    validationError(res, error);
   }
 };
