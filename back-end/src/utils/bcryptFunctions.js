@@ -7,6 +7,6 @@ export const crypt = async (password) => {
   return await bcrypt.hash(password, saltRounds)
 };
 
-export const compareCrypt = async () => {
+export const compareCrypt = async (password, passwordDB) => {
     return await bcrypt.compare(password, passwordDB)
 };
