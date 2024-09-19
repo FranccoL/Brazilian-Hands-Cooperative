@@ -5,19 +5,20 @@ const schema = new mongoose.Schema(
     name: {
       type: String,
       trim: true,
-      require: "Nome é essencial para o cadastro.",
+      required: "Nome é essencial para o cadastro.",
     },
     email: {
       type: String,
       trim: true,
       lowercase: true,
       unique: true,
-      require: "E-mail é essencial para cadastro",
+      required: "E-mail é essencial para cadastro",
     },
     phone: {
       type: String,
       trim: true,
-      require: "Whats é essencial para cadastro.",
+      required: "Whats é essencial para cadastro.",
+      math:[/^\+?\d{10,15}$/, "Número de telefone inválido."]
     },
     address: {
       street: {
@@ -27,17 +28,20 @@ const schema = new mongoose.Schema(
         type: String,
       },
       eircode: {
-        type: Number,
-      },
+        type: String,
+        minlength: [7, "Se não foi colocado espaço o mínimo são 7 caracteres."],
+        maxlength: [8, "Se foi colocado espaço o máximo são 8 caracteres."]
+      }
     },
     work: {
       type: String,
       trim: true,
-      require: "Qual serviço vc pode prestar?",
+      required: "Qual serviço vc pode prestar?",
     },
     equipment: {
       type: Boolean,
-      require: "Marque se possui o não equipamentos",
+      default:false,
+      required: "Marque se possui o não equipamentos",
     },
     whatEquipment: {
       type: String,
@@ -46,7 +50,8 @@ const schema = new mongoose.Schema(
     shapeOfDisplacement: {
       type: String,
       trim: true,
-      require: "Como vc pode se deslocar para o/os serviço/s",
+      required: "Como você pode se deslocar para o serviço?",
+      enum: ["Carro", "Moto", "Transporte Público", "A Pé", "Carro de Aplicativo"]
     },
   },
   {

@@ -5,20 +5,22 @@ const schema = new mongoose.Schema(
     name: {
       type: String,
       trim: true,
-      require: "Nome é essencial para o cadastro",
+      required: "Nome é essencial para o cadastro",
     },
     email: {
       type: String,
       lowercase: true,
       trim: true,
       unique: true,
-      require: "Email é essencial para seu cadastro",
+      required: "Email é essencial para seu cadastro",
+      match:[/.+\@.+\..+/, "Por favor, insira um e-mail válido."]
     },
     password: {
       type: String,
       trim: true,
       select: false,
-      require: "Senha é essencial para seu cadastro",
+      required: "Senha é essencial para seu cadastro",
+      minlength:[6, "Senha deve ter no minimo 6 caracteres."]
     },
   },
   {

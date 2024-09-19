@@ -1,4 +1,5 @@
 import Adm from "../models/adm.model.js";
+import { validationError } from "../validatorError/validationError.js";
 
 export const getAdm = async (_, res) => {
   try {
@@ -6,7 +7,7 @@ export const getAdm = async (_, res) => {
 
     return res.status(200).json(adm);
   } catch (error) {
-    console.log(error);
+    validationError(res, error)
   }
 };
 
@@ -18,7 +19,7 @@ export const getByIdAdm = async (req, res) => {
 
     return res.status(200).json(adm);
   } catch (error) {
-    console.log(error)
+   validationError(res, error)
   }
 };
 
@@ -30,7 +31,7 @@ export const createAdm = async (req, res) => {
 
     return res.status(200).json(adm);
   } catch (error) {
-    console.log(error)
+   validationError(res, error)
   }
 };
 
@@ -43,7 +44,7 @@ export const updateAdm = async (req, res) => {
 
     return res.status(200).json(adm);
   } catch (error) {
-    console.log(error)
+    validationError(res, error)
   }
 };
 
@@ -54,6 +55,6 @@ export const removeAdm = async (req, res) => {
 
     return res.status(200).json(deleteAdm)
   } catch (error) {
-    console.log(error)
+    validationError(res, error)
   }
 };

@@ -5,12 +5,13 @@ const schema = new mongoose.Schema(
     name: {
       type: String,
       trim: true,
-      require: "Nome é essencial para o cadastro",
+      required: "Nome é essencial para o cadastro",
     },
     phone: {
       type: String,
       trim: true,
-      require: "Whats é essencial para cadastro.",
+      required: "Whats é essencial para cadastro.",
+      match:[/^\+?\d{10,15}$/, "Número de telefone inválido."]
     },
     address: {
       street: {
@@ -20,16 +21,21 @@ const schema = new mongoose.Schema(
         type: String,
       },
       eircode: {
-        type: Number,
-      },
+        type: String,
+        minlength: [7, "Se não foi colocado espaço o mínimo são 7 caracteres."],
+        maxlength: [8, "Se foi colocado espaço o máximo são 8 caracteres."]
+      }
     },
     typeOfWork: {
       type: String,
-      require: "Tipo de exercicio é essencial",
+      required: "Tipo de exercicio é essencial",
     },
     howFindCompany: {
       type: String,
-      require: ".......",
+      required: ".......",
+    },
+    indicatorName:{
+      type:String
     },
     particularities: {
       type: String,
