@@ -29,6 +29,7 @@ const schema = new mongoose.Schema(
     typeOfWork: {
       type: String,
       required: "Tipo de exercicio é essencial",
+      enum:["Serviço de limpeza", "Paisagismo e jardinagem", "Pintura"]
     },
     howFindCompany: {
       type: String,
