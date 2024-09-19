@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import bearerToken from 'express-bearer-token';
 import { routerCollaborator } from "./src/routes/collaborator.routes.js";
 import { routerAdm } from "./src/routes/adm.routes.js";
 import { routerClient } from "./src/routes/client.routes.js";
@@ -11,8 +12,9 @@ dotenv.config();
 
 const app = express();
 
-// Middleware para CORS e JSON   
+// CORS e JSON   
 app.use(cors());
+app.use(bearerToken());
 app.use(express.json());
 
 // Rota básica para teste

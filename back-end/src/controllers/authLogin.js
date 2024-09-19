@@ -37,7 +37,8 @@ export const authLogin = async (req, res) => {
         expiresIn: "1d",
       });
     }
-    
+     
+  
     res.status(200).json(token)
    
   } catch (error) {

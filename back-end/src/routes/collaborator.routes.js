@@ -7,11 +7,12 @@ import {
   removeCollaborator,
   updateCollabarator,
 } from "../controllers/collaborator.controller.js";
+import { acessAuth } from "../middleware/acessAuth.js";
 
 export const routerCollaborator = Router();
 
-routerCollaborator.get("/collaborator", connectDB, getAllCollaborator);
-routerCollaborator.get("/collaborator/:id", connectDB, getCollaboratorId);
+routerCollaborator.get("/collaborator",acessAuth ,connectDB, getAllCollaborator);
+routerCollaborator.get("/collaborator/:id", acessAuth,connectDB, getCollaboratorId);
 routerCollaborator.post("/collaborator", connectDB, createCollaborator);
-routerCollaborator.put("/collaborator/:id", connectDB, updateCollabarator);
-routerCollaborator.delete("/collaborator/:id", connectDB, removeCollaborator);
+routerCollaborator.put("/collaborator/:id",acessAuth ,connectDB, updateCollabarator);
+routerCollaborator.delete("/collaborator/:id",acessAuth,connectDB, removeCollaborator);
