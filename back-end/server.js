@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import { routerCollaborator } from "./src/routes/collaborator.routes.js";
 import { routerAdm } from "./src/routes/adm.routes.js";
 import { routerClient } from "./src/routes/client.routes.js";
+import { routerLogin } from "./src/routes/authLogin.routes.js";
 
 
 dotenv.config();
@@ -28,6 +29,9 @@ app.use('/', routerClient)
 
 //routes Collaborator
 app.use('/', routerCollaborator)
+
+//login
+app.use('/', routerLogin)
 
 
 
