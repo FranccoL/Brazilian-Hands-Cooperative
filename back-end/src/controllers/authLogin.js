@@ -9,9 +9,8 @@ export const authLogin = async (req, res) => {
     let adm = await Adm.findOne({ email });
 
     if (!adm) {
-      throw new Error("E-email inválido.");
+      return res.status(400).json({ message: "Usuário não encontrado" });
     }
-
     // Gera um token hexadecimal de 6 caracteres
     const token = crypto.randomBytes(3).toString('hex')
 
@@ -28,7 +27,7 @@ export const authLogin = async (req, res) => {
 
     res.status(200).json({ message: "Token enviado para o seu e-mail" });
   } catch (error) {
-    console.log(error);
+    validationError(res, error);
   }
 };
 
@@ -49,7 +48,7 @@ export const validationToken = async (req, res) => {
     res.status(200).json({ message: 'Login bem-sucedido!' });
 
   } catch (error) {
-    res.status(500).json({ message: 'Erro ao verificar o token' });
+    validationError(res, error);
   }
 };
 
