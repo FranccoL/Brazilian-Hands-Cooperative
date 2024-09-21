@@ -1,5 +1,4 @@
 import Adm from "../models/adm.model.js";
-import { crypt } from "../utils/bcryptFunctions.js";
 import { validationError } from "../validatorError/validationError.js";
 
 export const getAdm = async (_, res) => {
@@ -26,22 +25,11 @@ export const getByIdAdm = async (req, res) => {
 
 export const createAdm = async (req, res) => {
   try {
-    const { password, ...body } = req.body;
+    const adm = req.body;
 
-    let cryptPass;
+    const admCreate = await Adm.create(data);
 
-    if (password) {
-      cryptPass = await crypt(password);
-    }
-
-    const data = {
-      ...req.body,
-      password: cryptPass,
-    };
-
-    const adm = await Adm.create(data);
-
-    return res.status(200).json(adm);
+    return res.status(200).json(admCreate);
   } catch (error) {
     validationError(res, error);
   }
@@ -50,13 +38,8 @@ export const createAdm = async (req, res) => {
 export const updateAdm = async (req, res) => {
   try {
     const { id } = req.params;
+
     const data = req.body;
-
-    if (data.password) {
-      const cryptPass = await crypt(data.password);
-
-      data.password = cryptPass;
-    }
 
     const adm = await Adm.findByIdAndUpdate(id, data, { new: true });
 
