@@ -6,7 +6,7 @@ import { acessAuth } from "../middleware/acessAuth.js";
 
 export const routerAdm = Router() 
 
-routerAdm.get('/adm',acessAuth ,connectDB, getAdm)
+routerAdm.get('/adm',acessAuth,connectDB, getAdm)
 routerAdm.get('/adm/:id',acessAuth ,connectDB, getByIdAdm)
 routerAdm.post('/adm', connectDB, createAdm)
 routerAdm.put('/adm/:id',acessAuth ,connectDB, updateAdm)

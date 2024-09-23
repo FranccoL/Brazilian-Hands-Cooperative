@@ -11,7 +11,7 @@ import { acessAuth } from "../middleware/acessAuth.js";
 
 export const routerClient = Router();
 
-routerClient.get("/client", connectDB, getAllClient);
+routerClient.get("/client", acessAuth, connectDB, getAllClient);
 routerClient.get("/client/:id", acessAuth, connectDB, getClientById);
 routerClient.post("/client", connectDB, createClient);
 routerClient.put("/client/:id", acessAuth ,connectDB, updateClient);

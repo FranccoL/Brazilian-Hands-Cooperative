@@ -1,5 +1,5 @@
 import {Router} from 'express';
-import { authLogin, validationToken } from '../controllers/authLogin.js';
+import { authLogin, validationToken,  } from '../controllers/authLogin.js';
 import { connectDB } from '../configDB/connectDB.js';
 
 export const routerLogin = Router()
