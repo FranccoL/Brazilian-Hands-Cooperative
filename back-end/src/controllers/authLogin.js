@@ -5,6 +5,7 @@ import jwt from "jsonwebtoken";
 import { validationError } from "../validatorError/validationError.js";
 
 export const authLogin = async (req, res) => {
+  //#swagger.tags=['Login']
   try {
     const { email } = req.body;
 
@@ -35,12 +36,11 @@ export const authLogin = async (req, res) => {
 };
 
 export const validationToken = async (req, res) => {
+  //#swagger.tags=['Login']
   try {
-    const {email, token } = req.body;
-
+    const { email, token } = req.body;
 
     const adm = await Adm.findOne({ email });
-
 
     if (!adm) {
       return res.status(400).json({ message: "Usuário não encontrado" });
@@ -60,7 +60,7 @@ export const validationToken = async (req, res) => {
     });
 
     // Se tudo estiver correto, o login é bem-sucedido
-    res.status(200).json({"token": tokenAcc});
+    res.status(200).json({ token: tokenAcc });
   } catch (error) {
     validationError(res, error);
   }

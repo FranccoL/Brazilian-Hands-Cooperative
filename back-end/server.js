@@ -7,6 +7,8 @@ import { routerAdm } from "./src/routes/adm.routes.js";
 import { routerClient } from "./src/routes/client.routes.js";
 import { routerLogin } from "./src/routes/authLogin.routes.js";
 
+//import doc
+import swaggerUi from 'swagger-ui-express';
 
 dotenv.config();
 
@@ -17,10 +19,10 @@ app.use(cors());
 app.use(bearerToken());
 app.use(express.json());
 
-// Rota básica para teste
-app.get("/", (_, res) => {
-  return res.send("Hello Brazilian");
-});
+// // Rota básica para teste
+// app.get("/", (_, res) => {
+//   return res.send("Hello Brazilian");
+// });
 
 
 //routes Adm
@@ -35,6 +37,13 @@ app.use('/', routerCollaborator)
 //login
 app.use('/', routerLogin)
 
+//doc
+
+if(process.env.NODE_ENV !== "test"){
+  const swaggerFile = await import("./swagger/swagger_output.json", {assert: {type: 'json'}})
+  app.get('/', (_, res) => { /*#swagger.ignore = true*/ res.redirect('/doc'); });
+  app.use('/doc'/*, authDocProducao*/, swaggerUi.serve, swaggerUi.setup(swaggerFile.default)); // Acesse o conteúdo padrão do JSON
+}
 
 
 // Se a conexão for bem-sucedida, inicia o servidor
@@ -42,6 +51,9 @@ app.listen(process.env.PORT, () => {
   console.log(`Conectado ao banco de dados.`);
   console.log(`Servidor rodando na porta ${process.env.PORT}`);
 });
+
+
+
 
 /**
  * TESTE PARA VER SE BANCO ESTA CONECTANDO:

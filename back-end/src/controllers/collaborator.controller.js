@@ -3,6 +3,7 @@ import Collaborator from "../models/collaborator.model.js";
 import { validationError } from "../validatorError/validationError.js";
 
 export const getAllCollaborator = async (_, res) => {
+   //#swagger.tags=['Collaborator']
   try {
     let client = await Collaborator.find();
     return res.status(200).json(client);
@@ -12,6 +13,7 @@ export const getAllCollaborator = async (_, res) => {
 };
 
 export const getCollaboratorId = async (req, res) => {
+   //#swagger.tags=['Collaborator']
   try {
     const { id } = req.params;
 
@@ -32,6 +34,7 @@ export const getCollaboratorId = async (req, res) => {
 };
 
 export const createCollaborator = async (req, res) => {
+   //#swagger.tags=['Collaborator']
   try {
     const data = req.body;
 
@@ -44,6 +47,7 @@ export const createCollaborator = async (req, res) => {
 };
 
 export const updateCollabarator = async (req, res) => {
+   //#swagger.tags=['Collaborator']
   try {
     const { id } = req.params;
 
@@ -68,6 +72,7 @@ export const updateCollabarator = async (req, res) => {
 };
 
 export const removeCollaborator = async (req, res) => {
+   //#swagger.tags=['Collaborator']
   try {
     const { id } = req.params;
    

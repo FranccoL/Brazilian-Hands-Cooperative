@@ -3,6 +3,7 @@ import Client from "../models/client.model.js";
 import { validationError } from "../validatorError/validationError.js";
 
 export const getAllClient = async (_, res) => {
+    //#swagger.tags=['Client']
   try {
     const clients = await Client.find();
 
@@ -13,6 +14,7 @@ export const getAllClient = async (_, res) => {
 };
 
 export const getClientById = async (req, res) => {
+   //#swagger.tags=['Client']
   try {
     const { id } = req.params;
 
@@ -33,6 +35,7 @@ export const getClientById = async (req, res) => {
 };
 
 export const createClient = async (req, res) => {
+   //#swagger.tags=['Client']
   try {
     const data = req.body;
 
@@ -45,6 +48,7 @@ export const createClient = async (req, res) => {
 };
 
 export const updateClient = async (req, res) => {
+   //#swagger.tags=['Client']
   try {
     const { id } = req.params;
 
@@ -67,6 +71,7 @@ export const updateClient = async (req, res) => {
 };
 
 export const deleteClient = async (req, res) => {
+   //#swagger.tags=['Client']
   try {
     const {id} = req.params;
 

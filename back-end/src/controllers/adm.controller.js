@@ -3,6 +3,7 @@ import Adm from "../models/adm.model.js";
 import { validationError } from "../validatorError/validationError.js";
 
 export const getAdm = async (_, res) => {
+  //#swagger.tags=['Admin']
   try {
     const adm = await Adm.find();
 
@@ -13,11 +14,12 @@ export const getAdm = async (_, res) => {
 };
 
 export const getByIdAdm = async (req, res) => {
+  //#swagger.tags=['Admin']
   try {
     const { id } = req.params;
 
-      // Verificar se o ID é um ObjectId válido
-    if(!mongoose.Types.ObjectId.isValid(id)){
+    // Verificar se o ID é um ObjectId válido
+    if (!mongoose.Types.ObjectId.isValid(id)) {
       return res.status(400).json({ message: "ID inválido" });
     }
 
@@ -34,9 +36,10 @@ export const getByIdAdm = async (req, res) => {
 };
 
 export const createAdm = async (req, res) => {
+  //#swagger.tags=['Admin']
   try {
     const adm = req.body;
-  
+
     const admCreate = await Adm.create(adm);
 
     return res.status(200).json(admCreate);
@@ -46,10 +49,11 @@ export const createAdm = async (req, res) => {
 };
 
 export const updateAdm = async (req, res) => {
+  //#swagger.tags=['Admin']
   try {
     const { id } = req.params;
-   
-    if(!mongoose.Types.ObjectId.isValid(id)){
+
+    if (!mongoose.Types.ObjectId.isValid(id)) {
       return res.status(400).json({ message: "ID inválido" });
     }
 
@@ -57,7 +61,7 @@ export const updateAdm = async (req, res) => {
 
     const adm = await Adm.findByIdAndUpdate(id, data, { new: true });
 
-   if (!adm) {
+    if (!adm) {
       return res.status(404).json({ message: "Administrador não encontrado" });
     }
 
@@ -68,10 +72,11 @@ export const updateAdm = async (req, res) => {
 };
 
 export const removeAdm = async (req, res) => {
+  //#swagger.tags=['Admin']
   try {
     const { id } = req.params;
 
-    if(!mongoose.Types.ObjectId.isValid(id)){
+    if (!mongoose.Types.ObjectId.isValid(id)) {
       return res.status(400).json({ message: "ID inválido" });
     }
 
