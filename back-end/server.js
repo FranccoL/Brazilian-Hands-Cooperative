@@ -6,9 +6,11 @@ import { routerCollaborator } from "./src/routes/collaborator.routes.js";
 import { routerAdm } from "./src/routes/adm.routes.js";
 import { routerClient } from "./src/routes/client.routes.js";
 import { routerLogin } from "./src/routes/authLogin.routes.js";
+import { workRouter } from "./src/routes/works.routes.js";
 
 //import doc
 import swaggerUi from 'swagger-ui-express';
+
 
 dotenv.config();
 
@@ -36,6 +38,9 @@ app.use('/', routerCollaborator)
 
 //login
 app.use('/', routerLogin)
+
+//work
+app.use('/', workRouter)
 
 //doc
 

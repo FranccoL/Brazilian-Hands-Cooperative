@@ -4,6 +4,7 @@ import swaggerAutogen from "swagger-autogen";
 import Adm from "../src/models/adm.model.js";
 import Client from "../src/models/client.model.js";
 import Collaborator from "../src/models/collaborator.model.js";
+import Work from '../src/models/admWork.model.js'
 
 // Define o caminho do arquivo de saída que será gerado com a documentação
 const outputFile = "./swagger_output.json"; 
@@ -12,6 +13,7 @@ const outputFile = "./swagger_output.json";
 const endPointFiles = [
   "../server.js",
   "../src/routes/adm.routes.js",
+  "../src/routes/works.routes.js",
   "../src/routes/authLogin.routes.js",
   "../src/routes/client.routes.js",
   "../src/routes/collaborator.routes.js",
@@ -46,6 +48,7 @@ let doc = {
     schemas: {
       // Converte modelos Mongoose em esquemas Swagger
       Adm: mongooseToSwagger(Adm),
+      AdmWork: mongooseToSwagger(Work),
       Client: mongooseToSwagger(Client),
       Collaborator: mongooseToSwagger(Collaborator),
     },

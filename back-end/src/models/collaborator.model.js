@@ -13,6 +13,7 @@ const schema = new mongoose.Schema(
       lowercase: true,
       unique: true,
       required: "E-mail é essencial para cadastro",
+      match: [/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/, 'Por favor, forneça um endereço de email válido']
     },
     phone: {
       type: String,
