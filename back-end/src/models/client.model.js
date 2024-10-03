@@ -13,18 +13,10 @@ const schema = new mongoose.Schema(
       required: "Whats é essencial para cadastro.",
       match: [/^\+?\d{10,15}$/, "Número de telefone inválido."],
     },
-    address: {
-      street: {
-        type: String,
-      },
-      city: {
-        type: String,
-      },
-      eircode: {
-        type: String,
-        minlength: [7, "Se não foi colocado espaço o mínimo são 7 caracteres."],
-        maxlength: [8, "Se foi colocado espaço o máximo são 8 caracteres."],
-      },
+    eircode: {
+      type: String,
+      minlength: [7, "Se não foi colocado espaço o mínimo são 7 caracteres."],
+      maxlength: [8, "Se foi colocado espaço o máximo são 8 caracteres."],
     },
     typeOfWork: {
       type: String,
@@ -35,7 +27,7 @@ const schema = new mongoose.Schema(
       type: Date,
       required: "Coloque a data que deseja o serviço.",
       validate: {
-       validator: function(date) {
+        validator: function (date) {
           return date >= Date.now();
         },
       },

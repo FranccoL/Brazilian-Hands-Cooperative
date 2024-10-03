@@ -4,6 +4,7 @@ import {
   createCollaborator,
   getAllCollaborator,
   getCollaboratorId,
+  getCollaboratorsByWork,
   removeCollaborator,
   updateCollabarator,
 } from "../controllers/collaborator.controller.js";
@@ -13,6 +14,7 @@ export const routerCollaborator = Router();
 
 routerCollaborator.get("/collaborator",connectDB, getAllCollaborator);
 routerCollaborator.get("/collaborator/:id", connectDB, getCollaboratorId);
+routerCollaborator.get("/collaborators/:work", getCollaboratorsByWork);
 routerCollaborator.post("/collaborator", createCollaborator);
 routerCollaborator.put("/collaborator/:id", connectDB, updateCollabarator);
 routerCollaborator.delete("/collaborator/:id",connectDB, removeCollaborator);

@@ -77,26 +77,53 @@ export const getWorkByMonth = async (req, res) => {
   }
 };
 
+//Test 
 export const createWork = async (req, res) => {
-   //#swagger.tags=['Works']
+  //#swagger.tags=['Works']
   try {
-    const { client, collaborator, work, price, date, status } = req.body;
+    const { client, work, collaborator, price, date, status } = req.body;
 
-    const isValidClient = await Client.find({ name: client });
-
+    // Verifica se o cliente é válido
+    const isValidClient = await Client.findOne({ name: client });
     if (!isValidClient) {
       return res.status(404).json({ message: "Cliente não encontrado" });
     }
 
-    const isValidCollaborator = await Collaborator.find({ name: collaborator });
-
-    if (!isValidCollaborator) {
-      return res.status(404).json({ message: "Colaborador não encontrado" });
+    // Verifica se o tipo de trabalho (work) é válido
+    if (!["Serviço de limpeza", "Paisagismo e jardinagem", "Pintura"].includes(work)) {
+      return res.status(400).json({ message: "Tipo de serviço inválido" });
     }
 
+    // Busca colaboradores que realizam o serviço selecionado
+    const availableCollaborators = await Collaborator.find({ work });
+
+    if (availableCollaborators.length === 0) {
+      return res.status(404).json({ message: `Nenhum colaborador encontrado para o serviço de ${work}` });
+    }
+
+    // Se não foi passado um colaborador específico, retorna a lista de colaboradores disponíveis
+    if (!collaborator) {
+      return res.status(200).json({
+        message: `Colaboradores disponíveis para o serviço de ${work}`,
+        collaborators: availableCollaborators,
+      });
+    }
+
+    // Verifica se o colaborador escolhido está na lista de colaboradores disponíveis
+    const isValidCollaborator = availableCollaborators.find(
+      (coll) => coll._id.toString() === collaborator
+    );
+
+    if (!isValidCollaborator) {
+      return res.status(404).json({
+        message: `Colaborador selecionado não presta o serviço de ${work}`,
+      });
+    }
+
+    // Cria o novo trabalho (work)
     const newWork = await Works.create({
-      client: isValidClient[0]._id,
-      collaborator: isValidCollaborator[0]._id,
+      client: isValidClient._id,
+      collaborator: isValidCollaborator._id,
       work,
       price,
       date,

@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
 
-
 const schema = new mongoose.Schema(
   {
     client: {
@@ -10,6 +9,11 @@ const schema = new mongoose.Schema(
       required:
         "Para gerar um serviço é nescessario o nome completo do cliente",
     },
+    work: {
+      type: String,
+      enum: ["Serviço de limpeza", "Paisagismo e jardinagem", "Pintura"],
+      required: "Escolha o modelo de serviço que será executado",
+    },
     collaborator: {
       type: mongoose.Types.ObjectId,
       trim: true,
@@ -17,11 +21,7 @@ const schema = new mongoose.Schema(
       required:
         "Para gerar um serviço é nescessario o nome completo do colaborador",
     },
-    work: {
-      type: String,
-      enum: ["Serviço de limpeza", "Paisagismo e jardinagem", "Pintura"],
-      required: "Escolha o modelo de serviço que será executado",
-    },
+
     price: {
       type: Number,
       required: true,

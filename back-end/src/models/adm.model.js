@@ -31,6 +31,8 @@ const SchemaAdm = mongoose.models.Adms || mongoose.model("Adms", schema);
 
 export default SchemaAdm;
 
+
+
 //const schema = new mongoose.Schema(
 //   {
 //     name: {

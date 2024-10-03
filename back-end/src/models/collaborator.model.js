@@ -13,35 +13,31 @@ const schema = new mongoose.Schema(
       lowercase: true,
       unique: true,
       required: "E-mail é essencial para cadastro",
-      match: [/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/, 'Por favor, forneça um endereço de email válido']
+      match: [
+        /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
+        "Por favor, forneça um endereço de email válido",
+      ],
     },
     phone: {
       type: String,
       trim: true,
       required: "Whats é essencial para cadastro.",
-      math:[/^\+?\d{10,15}$/, "Número de telefone inválido."]
+      math: [/^\+?\d{10,15}$/, "Número de telefone inválido."],
     },
-    address: {
-      street: {
-        type: String,
-      },
-      city: {
-        type: String,
-      },
-      eircode: {
-        type: String,
-        minlength: [7, "Se não foi colocado espaço o mínimo são 7 caracteres."],
-        maxlength: [8, "Se foi colocado espaço o máximo são 8 caracteres."]
-      }
+    eircode: {
+      type: String,
+      minlength: [7, "Se não foi colocado espaço o mínimo são 7 caracteres."],
+      maxlength: [8, "Se foi colocado espaço o máximo são 8 caracteres."],
     },
     work: {
       type: String,
       trim: true,
+      enum: ["Serviço de limpeza", "Paisagismo e jardinagem", "Pintura"],
       required: "Qual serviço vc pode prestar?",
     },
     equipment: {
       type: Boolean,
-      default:false,
+      default: false,
       required: "Marque se possui o não equipamentos",
     },
     whatEquipment: {
@@ -52,7 +48,13 @@ const schema = new mongoose.Schema(
       type: String,
       trim: true,
       required: "Como você pode se deslocar para o serviço?",
-      enum: ["Carro", "Moto", "Transporte Público", "A Pé", "Carro de Aplicativo"]
+      enum: [
+        "Carro",
+        "Moto",
+        "Transporte Público",
+        "A Pé",
+        "Carro de Aplicativo",
+      ],
     },
   },
   {
@@ -60,7 +62,8 @@ const schema = new mongoose.Schema(
   }
 );
 
-const SchemaCollaborator = mongoose.models.Collaborator || mongoose.model("Collaborator", schema);
+const SchemaCollaborator =
+  mongoose.models.Collaborator || mongoose.model("Collaborator", schema);
 
 export default SchemaCollaborator;
 

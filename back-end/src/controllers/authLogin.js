@@ -46,9 +46,6 @@ export const validationToken = async (req, res) => {
       return res.status(400).json({ message: "Usuário não encontrado" });
     }
 
-    console.log("eee", adm.token);
-    console.log(token);
-
     // Verificar se o token está correto e ainda é válido
     if (adm.token !== token || Date.now() > adm.tokenExpires) {
       return res.status(400).json({ message: "Token inválido ou expirado" });

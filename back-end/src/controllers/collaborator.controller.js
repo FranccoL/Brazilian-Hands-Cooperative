@@ -33,6 +33,26 @@ export const getCollaboratorId = async (req, res) => {
   }
 };
 
+export const getCollaboratorsByWork  = async (req, res) =>{
+  //#swagger.tags=['Collaborator']
+  try {
+      const{ work }= req.params
+
+    if(!["Serviço de limpeza", "Paisagismo e jardinagem", "Pintura"].includes(work)){
+      return res.status(400).json({ message: "Tipo de serviço inválido" });
+    }
+   
+    const collaborators = await Collaborator.find({ work });
+    if (collaborators.length === 0) {
+      return res.status(404).json({ message: "Nenhum colaborador encontrado para esse serviço" });
+    }
+
+    return res.status(200).json(collaborators);
+
+  } catch (error) {
+    validationError(res, error);
+  }
+}
 export const createCollaborator = async (req, res) => {
    //#swagger.tags=['Collaborator']
   try {
