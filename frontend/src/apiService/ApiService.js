@@ -1,0 +1,24 @@
+import axios from 'axios';
+
+const api = axios.create({
+    baseURL: 'http://localhost:3000',
+    timeout: 10000,// Tempo máximo de espera das requisições (em ms)
+    headers:{
+        'Content-Type': 'application/json'
+    }
+});
+
+// Intercepta cada requisição antes de ela ser enviada
+api.interceptors.request.use((config)=>{
+    const token = localStorage.getItem('token') // Obtenha o token de onde ele estiver armazenado
+
+    if(token){
+        config.headers['Authorization'] = `Bearer ${token}`
+    }
+    return config
+
+}, error=>{
+    return Promise.reject(error)
+})
+
+export default api
