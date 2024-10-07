@@ -19,39 +19,47 @@ export const getAllWorks = async (_, res) => {
 };
 
 export const getWorkByDay = async (req, res) => {
-   //#swagger.tags=['Works']
   try {
-    const { date } = req.query; //query parameter, ex: ?date=2024-09-26
+    const { date } = req.query;
 
-    if (!date || isValid(new Date(date))) {
+    // Verifica se a data é válida
+    if (!date || isNaN(new Date(date).getTime())) {
       return res.status(400).json({ message: "Data inválida." });
     }
 
-    //date.setHours(hours, minutes, seconds, milliseconds);
-
-    const startOfDay = new Date(date);
-    startOfDay.setHours(0, 0, 0, 0);
-
-    const endOfDay = new Date(date);
-    endOfDay.setHours(23, 59, 59, 999);
+    // Convertendo a data para UTC para comparar corretamente com o banco de dados
+    const startOfDay = new Date(new Date(date).setUTCHours(0, 0, 0, 0));
+    const endOfDay = new Date(new Date(date).setUTCHours(23, 59, 59, 999));
 
     const works = await Works.find({
       date: {
         $gte: startOfDay,
         $lte: endOfDay,
       },
+      // Se quiser filtrar apenas os agendados, adicione esta linha:
+      // status: "Agendado"
     })
-      .populate("Client")
-      .populate("collaborator");
+      .populate("client", "name eircode") // Especificando os campos que queremos do cliente
+      .populate("collaborator", "name"); // Especificando os campos que queremos do colaborador
 
-    return res.status(200).json(works);
+    // Formatar os dados antes de enviar
+    const formattedWorks = works.map((work) => ({
+      client: work.client.name,
+      eircode: work.client.eircode || "Endereço não cadastrado",
+      collaborator: work.collaborator.name,
+      work: work.work,
+      price: work.price,
+      status: work.status,
+    }));
+
+    return res.status(200).json(formattedWorks);
   } catch (error) {
     validationError(res, error);
   }
 };
 
 export const getWorkByMonth = async (req, res) => {
-   //#swagger.tags=['Works']
+  //#swagger.tags=['Works']
   try {
     const { month, year } = req.query; //query parameters, ex: ?year=2024&month=9
 
@@ -77,7 +85,7 @@ export const getWorkByMonth = async (req, res) => {
   }
 };
 
-//Test 
+//Test
 export const createWork = async (req, res) => {
   //#swagger.tags=['Works']
   try {
@@ -90,7 +98,11 @@ export const createWork = async (req, res) => {
     }
 
     // Verifica se o tipo de trabalho (work) é válido
-    if (!["Serviço de limpeza", "Paisagismo e jardinagem", "Pintura"].includes(work)) {
+    if (
+      !["Serviço de limpeza", "Paisagismo e jardinagem", "Pintura"].includes(
+        work
+      )
+    ) {
       return res.status(400).json({ message: "Tipo de serviço inválido" });
     }
 
@@ -98,7 +110,9 @@ export const createWork = async (req, res) => {
     const availableCollaborators = await Collaborator.find({ work });
 
     if (availableCollaborators.length === 0) {
-      return res.status(404).json({ message: `Nenhum colaborador encontrado para o serviço de ${work}` });
+      return res.status(404).json({
+        message: `Nenhum colaborador encontrado para o serviço de ${work}`,
+      });
     }
 
     // Se não foi passado um colaborador específico, retorna a lista de colaboradores disponíveis
@@ -111,7 +125,7 @@ export const createWork = async (req, res) => {
 
     // Verifica se o colaborador escolhido está na lista de colaboradores disponíveis
     const isValidCollaborator = availableCollaborators.find(
-      (coll) => coll._id.toString() === collaborator
+      (coll) => coll.name === collaborator
     );
 
     if (!isValidCollaborator) {
@@ -137,7 +151,7 @@ export const createWork = async (req, res) => {
 };
 
 export const updateWork = async (req, res) => {
-   //#swagger.tags=['Works']
+  //#swagger.tags=['Works']
   try {
     const { id } = req.params;
     const { client, collaborator, ...updates } = req.body;
