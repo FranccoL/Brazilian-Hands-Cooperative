@@ -2,7 +2,7 @@ import "./AdmLogin.css";
 import Logo from "../../../assets/logobrazil.svg";
 
 import { useState } from "react";
-import api from "../../../apiService/ApiService.js";
+import { api } from "../../../apiService/ApiService.js";
 
 function AdmLogin() {
   const [email, setEmail] = useState("");
@@ -100,5 +100,3 @@ function AdmLogin() {
   );
 }
 export default AdmLogin;
-
-

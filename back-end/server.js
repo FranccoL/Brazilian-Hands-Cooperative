@@ -1,7 +1,10 @@
 import express from "express";
 import cors from "cors";
+import bodyParser from 'body-parser';
+
 import dotenv from "dotenv";
 import bearerToken from 'express-bearer-token';
+
 import { routerCollaborator } from "./src/routes/collaborator.routes.js";
 import { routerAdm } from "./src/routes/adm.routes.js";
 import { routerClient } from "./src/routes/client.routes.js";
@@ -11,7 +14,6 @@ import { workRouter } from "./src/routes/works.routes.js";
 //import doc
 import swaggerUi from 'swagger-ui-express';
 
-
 dotenv.config();
 
 const app = express();
@@ -20,6 +22,10 @@ const app = express();
 app.use(cors());
 app.use(bearerToken());
 app.use(express.json());
+
+// Configuração do body-parser
+app.use(bodyParser.json()); // Para interpretar JSON
+app.use(bodyParser.urlencoded({ extended: true })); // Para interpretar URL-encoded
 
 // // Rota básica para teste
 // app.get("/", (_, res) => {

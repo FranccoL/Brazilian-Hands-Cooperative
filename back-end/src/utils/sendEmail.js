@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
 
-export const sendEmail = async (to, token) => {
+export const sendEmail = async (to, subject,  emailContent) => {
   // Configure o serviço de e-mail
   const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -14,8 +14,8 @@ export const sendEmail = async (to, token) => {
   const mailOptions = {
     from: process.env.EMAIL_ADM,
     to: to,
-    subject: "Seu Token de Login",
-    text: `Seu token de login é: ${token}`,
+    subject: subject,
+    html:  emailContent,
   };
   
    // Enviar o e-mail

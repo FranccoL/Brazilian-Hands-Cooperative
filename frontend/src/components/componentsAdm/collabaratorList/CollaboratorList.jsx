@@ -9,10 +9,10 @@ import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 import LinearProgress from "@mui/material/LinearProgress";
 import Alert from "@mui/material/Alert";
-import {api }from "../../../apiService/ApiService.js";
-import "./listWorks.css";
+import { api } from "../../../apiService/ApiService.js";
+import "./collaboratorList.css";
 
-export const ListDayWorks = () => {
+export const CollaboratorList = () => {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
   const [data, setData] = useState([]);
@@ -20,53 +20,20 @@ export const ListDayWorks = () => {
   const [loading, setLoading] = useState(false);
 
   const columns = [
-    { id: "client", label: "Cliente", minWidth: 170 },
-    { id: "eircode", label: "Endereço do Cliente", minWidth: 200 },
-    { id: "collaborator", label: "Colaborador", minWidth: 170 },
-    { id: "work", label: "Serviço", minWidth: 170 },
-    {
-      id: "price",
-      label: "Preço",
-      minWidth: 100,
-      align: "right",
-      format: (value) => `R$ ${value.toFixed(2)}`,
-    },
-    {
-      id: "status",
-      label: "Status",
-      minWidth: 130,
-      format: (value) => {
-        const statusColors = {
-          Agendado: "#FFA500",
-          "Em andamento": "#4169E1",
-          Concluído: "#32CD32",
-          Cancelado: "#FF0000",
-        };
-        return (
-          <span
-            style={{
-              color: statusColors[value] || "black",
-              fontWeight: "bold",
-            }}
-          >
-            {value}
-          </span>
-        );
-      },
-    },
+    { id: "name", label: "Colaborador", minWidth: 170 },
+    { id: "phone", label: "Telefone", minWidth: 170 },
+    { id: "work", label: "Serviço que executa", minWidth: 200 },
+    { id: "whatEquipment", label: "Qual equipamento", minWidth: 200 },
+    { id: "shapeOfDisplacement", label: "Locomoção", minWidth: 100 },
+    { id: "eircode", label: "Eircode", minWidth: 100 }
   ];
 
-  const getDayWorks = async () => {
+  const getClients = async () => {
     setError("");
     setLoading(true);
 
-    const dataWork = new Date();
-    dataWork.setHours(0, 0, 0, 0);
-
     try {
-      const response = await api.get(
-        `/work/day?date=${dataWork.toISOString()}`
-      );
+      const response = await api.get('/collaborator');
       setData(response.data);
     } catch (error) {
       console.error(error);
@@ -77,7 +44,7 @@ export const ListDayWorks = () => {
   };
 
   useEffect(() => {
-    getDayWorks();
+    getClients();
   }, []);
 
   const handleChangePage = (event, newPage) => {
@@ -89,11 +56,9 @@ export const ListDayWorks = () => {
     setPage(0);
   };
 
-  console.log(data);
-
-  return (
+   return (
     <section className="listContainer">
-      <h3>Trabalhos por área no mês atual</h3>
+      <h3>Lista de Collaboradores</h3>
       <Paper sx={{ width: "100%", overflow: "hidden" }}>
         {loading && <LinearProgress />}
         {error && (

@@ -3,12 +3,15 @@ import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import { createTheme } from '@mui/material/styles';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import ManageAccountsOutlinedIcon from '@mui/icons-material/ManageAccountsOutlined';
+import Groups2OutlinedIcon from '@mui/icons-material/Groups2Outlined';
 import { AppProvider } from '@toolpad/core/AppProvider';
 import { DashboardLayout } from '@toolpad/core/DashboardLayout';
 import Logo from '../../assets/logobrazil.svg'
 import Dashboard from '../../components/componentsAdm/dashbord/Dashboard';
 import ServiceRegistration from '../../components/componentsAdm/serviceRegistration/ServiceRegistration';
+import { CollaboratorList } from '../../components/componentsAdm/collabaratorList/CollaboratorList';
+import { ClientList } from '../../components/componentsAdm/clientList/ClientList';
 
 const NAVIGATION = [
   {
@@ -18,8 +21,18 @@ const NAVIGATION = [
   },
   {
     segment: 'serviceregistration',
-    title: 'serviceregistration',
-    icon: <ShoppingCartIcon />,
+    title: 'Cadastro de serviço',
+    icon: <ManageAccountsOutlinedIcon />,
+  },
+  {
+    segment: 'clientlist',
+    title: 'Lista de Clientes',
+    icon: <Groups2OutlinedIcon />,
+  },
+  {
+    segment: 'collaboratorlist',
+    title: 'Lista de Colaboradores',
+    icon: <Groups2OutlinedIcon />,
   },
 ];
 
@@ -52,6 +65,8 @@ function DemoPageContent({ pathname }) {
     >
       {pathname === '/dashboard' && <Dashboard/>}
       {pathname === '/serviceregistration' && <ServiceRegistration/>}
+      {pathname === '/clientlist' && <ClientList/>}
+      {pathname === '/collaboratorlist' && <CollaboratorList/>}
     </Box>
   );
 }
@@ -108,4 +123,3 @@ export default DashboardLayoutBranding;
 
 
 
-//https://mui.com/toolpad/core/react-dashboard-layout/

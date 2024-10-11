@@ -3,7 +3,6 @@ import Works from "../models/admWork.model.js";
 import Client from "../models/client.model.js";
 import Collaborator from "../models/collaborator.model.js";
 import { validationError } from "../validatorError/validationError.js";
-import { isValid } from "date-fns";
 
 export const getAllWorks = async (_, res) => {
   //#swagger.tags=['Works']
@@ -54,7 +53,8 @@ export const getWorkByDay = async (req, res) => {
 
     return res.status(200).json(formattedWorks);
   } catch (error) {
-    validationError(res, error);
+    // validationError(res, error);
+    console.error(error);
   }
 };
 
@@ -91,6 +91,45 @@ export const createWork = async (req, res) => {
   try {
     const { client, work, collaborator, price, date, status } = req.body;
 
+    // Função para formatar o valor monetário
+    const formatPrice = (value) => {
+      // Converte para string caso não seja
+      let strValue = value.toString();
+      
+      // Remove todos os pontos e vírgulas extras, deixando apenas o último
+      strValue = strValue.replace(/[.,]/g, function(match, offset, string) {
+        return offset === string.lastIndexOf('.') || offset === string.lastIndexOf(',') ? match : '';
+      });
+      
+      // Substitui vírgula por ponto para padronização
+      strValue = strValue.replace(',', '.');
+      
+      if (strValue.includes('.')) {
+        // Caso tenha ponto decimal
+        let [reais, centavos] = strValue.split('.');
+        
+        // Garante que centavos tenha sempre 2 dígitos
+        if (centavos.length === 1) {
+          centavos += '0';
+        } else if (centavos.length > 2) {
+          centavos = centavos.substring(0, 2);
+        }
+        
+        return parseFloat(`${reais}.${centavos}`);
+      } else {
+        // Caso não tenha ponto decimal, assume valor inteiro em reais
+        return parseFloat(`${strValue}.00`);
+      }
+    };
+
+    // Verifica se price foi fornecido
+    if (!price) {
+      return res.status(400).json({ message: "Preço é obrigatório" });
+    }
+
+    // Formata o preço
+    const formattedPrice = formatPrice(price);
+
     // Verifica se o cliente é válido
     const isValidClient = await Client.findOne({ name: client });
     if (!isValidClient) {
@@ -108,7 +147,6 @@ export const createWork = async (req, res) => {
 
     // Busca colaboradores que realizam o serviço selecionado
     const availableCollaborators = await Collaborator.find({ work });
-
     if (availableCollaborators.length === 0) {
       return res.status(404).json({
         message: `Nenhum colaborador encontrado para o serviço de ${work}`,
@@ -134,12 +172,12 @@ export const createWork = async (req, res) => {
       });
     }
 
-    // Cria o novo trabalho (work)
+    // Cria o novo trabalho (work) com o preço formatado
     const newWork = await Works.create({
       client: isValidClient._id,
       collaborator: isValidCollaborator._id,
       work,
-      price,
+      price: formattedPrice, // Usa o preço formatado
       date,
       status,
     });
@@ -149,7 +187,6 @@ export const createWork = async (req, res) => {
     validationError(res, error);
   }
 };
-
 export const updateWork = async (req, res) => {
   //#swagger.tags=['Works']
   try {

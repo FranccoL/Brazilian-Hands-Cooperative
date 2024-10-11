@@ -9,6 +9,7 @@ export const authLogin = async (req, res) => {
   try {
     const { email } = req.body;
 
+    // Verificar se o usuário existe
     let adm = await Adm.findOne({ email });
 
     if (!adm) {
@@ -27,8 +28,18 @@ export const authLogin = async (req, res) => {
 
     await adm.save();
 
-    await sendEmail(email, token);
+    // Definir o assunto e o conteúdo do e-mail
+    const subject = 'Seu Token de Login';
+    const emailContent = `
+      <p>Olá,</p>
+      <p>Seu token de login é: <strong>${token}</strong></p>
+      <p>Este token é válido por 10 minutos.</p>
+    `;
 
+    // Enviar o e-mail com o token
+    await sendEmail(email, subject, emailContent);
+
+    // Retornar uma resposta de sucesso
     res.status(200).json({ message: "Token enviado para o seu e-mail" });
   } catch (error) {
     validationError(res, error);

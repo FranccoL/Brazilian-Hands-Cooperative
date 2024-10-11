@@ -21,4 +21,13 @@ api.interceptors.request.use((config)=>{
     return Promise.reject(error)
 })
 
-export default api
+
+const apiCoordinates = axios.create({
+    baseURL:'https://api.opencagedata.com/geocode',
+    timeout: 10000,
+    headers:{
+        'Content-Type':'application/json'
+    }
+})
+
+export { api,  apiCoordinates}

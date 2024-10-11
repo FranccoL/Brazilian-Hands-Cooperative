@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import Collaborator from "../models/collaborator.model.js";
 import { validationError } from "../validatorError/validationError.js";
+import { sendEmail } from "../utils/sendEmail.js";
 
 export const getAllCollaborator = async (_, res) => {
    //#swagger.tags=['Collaborator']
@@ -11,6 +12,33 @@ export const getAllCollaborator = async (_, res) => {
     validationError(res, error);
   }
 };
+
+export const getCollaboratorsByWork  = async (req, res) =>{
+  //#swagger.tags=['Collaborator']
+  try {
+      const{ work }= req.query
+
+      if (!work) {
+        return res.status(404).json({ message: "Tipo de serviço não encontrado" });
+      }
+   
+    const collaborators = await Collaborator.find({ work: {$regex: work, $options: "i"}});
+
+    if (collaborators.length === 0) {
+      return res.status(404).json({ message: "Nenhum colaborador encontrado para esse serviço" });
+    }
+
+    const result = collaborators.map((collaborator) => ({
+      name: collaborator.name,
+      eircode: collaborator.eircode,
+    }));
+
+    return res.status(200).json({result});
+
+  } catch (error) {
+    validationError(res, error);
+  }
+}
 
 export const getCollaboratorId = async (req, res) => {
    //#swagger.tags=['Collaborator']
@@ -33,32 +61,32 @@ export const getCollaboratorId = async (req, res) => {
   }
 };
 
-export const getCollaboratorsByWork  = async (req, res) =>{
-  //#swagger.tags=['Collaborator']
-  try {
-      const{ work }= req.params
 
-    if(!["Serviço de limpeza", "Paisagismo e jardinagem", "Pintura"].includes(work)){
-      return res.status(400).json({ message: "Tipo de serviço inválido" });
-    }
-   
-    const collaborators = await Collaborator.find({ work });
-    if (collaborators.length === 0) {
-      return res.status(404).json({ message: "Nenhum colaborador encontrado para esse serviço" });
-    }
-
-    return res.status(200).json(collaborators);
-
-  } catch (error) {
-    validationError(res, error);
-  }
-}
 export const createCollaborator = async (req, res) => {
    //#swagger.tags=['Collaborator']
   try {
     const data = req.body;
 
     const collaborator = await Collaborator.create(data);
+
+    const emailContent = `
+      <h1>Novo Colaborador Cadastrado!</h1>
+
+      <p><strong>Nome:</strong> ${collaborator.name}</p>
+      <p><strong>E-mail:</strong> ${collaborator.email}</p>
+      <p><strong>Telefone:</strong> ${collaborator.phone}</p>
+      <p><strong>Eircode:</strong> ${collaborator.eircode || "Não informado"}</p>
+      <p><strong>Serviço que pode prestar:</strong> ${collaborator.work}</p>
+      <p><strong>Possui equipamentos:</strong> ${collaborator.equipment ? "Sim" : "Não"}</p>
+      <p><strong>Equipamentos:</strong> ${collaborator.whatEquipment || "Não informado"}</p>
+      <p><strong>Forma de deslocamento:</strong> ${collaborator.shapeOfDisplacement}</p>
+    `;
+
+    // Definir o assunto do e-mail
+    const subject = 'Novo Colaborador Cadastrado!';
+
+    // Enviar o e-mail com o assunto e o conteúdo
+    await sendEmail(process.env.EMAIL_ADM, subject, emailContent);
 
     return res.status(200).json(collaborator);
   } catch (error) {

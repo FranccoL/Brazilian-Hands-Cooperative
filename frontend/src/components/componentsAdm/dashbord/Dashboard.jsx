@@ -3,7 +3,7 @@ import {  PieChartMonth } from "../graphics/pieChart/PieChartMonth";
 import { ProfitPerAreaPerMonth } from "../graphics/profitPreAreaPerMonth/ProfitPerAreaPerMonth";
 import { ListDayWorks } from "../listsDayWorks/ListDayWorks";
 import "./Dashboard.css";
-import api from "../../../apiService/ApiService";
+import {api} from "../../../apiService/ApiService";
 
 function Dashboard() {
   const [data, setData] = useState([]);

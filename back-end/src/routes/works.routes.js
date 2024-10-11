@@ -14,10 +14,8 @@ export const workRouter = Router();
 workRouter.get("/work", connectDB, getAllWorks);
 workRouter.get("/work/day", connectDB, getWorkByDay);
 workRouter.get("/work/search", connectDB, getWorkByMonth);
-workRouter.post("/work",  connectDB, createWork);
+workRouter.post("/work", connectDB, createWork);
 workRouter.put("/work/:id", connectDB, updateWork);
-
-
 
 // workRouter.get("/work", acessAuth, connectDB, getAllWorks);
 // workRouter.get("/work/search", acessAuth, connectDB, getWorkByDay);
