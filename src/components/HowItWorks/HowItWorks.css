@@ -1,0 +1,39 @@
+.title-howWorks h1{
+    font-size: 96px;
+    text-align: center;
+    color:#291288;
+}
+
+.hows{
+    margin: 0 0 0 140px;
+    max-width: 260px;
+}
+.iluNumbs{
+    line-height: 190px;
+}
+
+.description h1 {
+    font-size: 25px;
+    font-weight: bold;  
+    margin-right: 120px;
+    text-align: start;
+    line-height: 80px;
+    margin-top: 40px;
+}
+.description p {
+    font-size: 20px;
+    
+}
+
+@media (max-width: 768px){
+    .title-howWorks{
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 568px){
+    .description{
+        width: 20px;
+    }
+}

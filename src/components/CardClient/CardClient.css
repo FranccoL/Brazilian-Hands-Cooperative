@@ -1,0 +1,104 @@
+.card{
+    border-radius: 30px;
+    border: black 3px solid;
+    width: 1100px;
+    height: 738px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding: -60px;
+    
+}
+
+.card h1{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 50px;
+    
+}
+.card h2 {
+    margin-left: 650px;
+    margin-top: -390px;
+    font-size: 40px;
+    color: white;
+    width: 250px;
+    text-shadow:  -1px -1px 0 green,  
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;;
+}
+.card2 {
+    background-color: white;
+    border: solid black 2px;
+    border-radius: 30px;   
+    width: 604px; 
+    height: 500px;
+    margin-right: 350px;
+    margin-top: 80px;
+    margin-left: 40px;
+}
+
+.contact-form {
+    text-align: start;
+    width: 100%;
+}
+
+form{
+    width: 550px;
+}
+.contact-form form{
+    margin: 40px 0 0 0;
+    
+
+}
+.contact-form .form-group {
+    column-gap: 39px ;
+
+}
+.form-select{
+    font-size: 15px;
+    line-height: 50px;
+    margin-left: 15px;
+   
+}
+.custom-select{
+    height: 40px;
+    border-radius: 10px;
+    margin-left: 15px;
+    width: 550px;
+}
+.profile{
+    margin-top: 35px;
+}
+
+.form-input2{
+    width: 270px;
+    margin-left: 300px;
+    border: none;
+    border-bottom: 1px solid #292F36;
+    outline:none;
+    color: #292F36;
+    font-size: 15px;
+    line-height: 50px;
+}
+
+.btform {
+    width: 229px;
+    height: 50px;
+    margin-top: 10px;
+    align-items: center;
+    padding-left: 70px;
+    margin-left: auto;
+    background-color: #291288;
+    color: white;
+    border-radius: 30px ;
+    border: solid black 1px;
+    cursor: pointer;
+    display: flex;
+    font-size: 22px;
+    transition: background-color 0.3s ease ;
+    text-align: center;
+}
+.btform:hover{
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}

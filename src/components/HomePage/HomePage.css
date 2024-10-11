@@ -1,0 +1,36 @@
+.homepage{
+    background-image: url(/banner.svg);
+    background-size: cover;
+    width: 1505px;
+    height: 680px;
+    margin-left: -12px;
+    color:white;
+    
+}
+
+.homepage h1{
+    font-size: 42px;
+    line-height: 200%;
+    margin-top: 60px;
+    margin-left: 140px;
+    
+    
+}
+.homepage h2{
+    font-size: 72px;
+    line-height: 5%;
+    margin-left: 160px;
+    line-height: 100%;
+}
+.homepage p {
+    font-size: 24px;
+    line-height: 200%;
+    margin-left: 140px;
+}
+
+.hero-text{
+    width: 40%;
+}
+.button{
+    margin-left: 140px;
+}

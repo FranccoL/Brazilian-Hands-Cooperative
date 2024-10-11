@@ -1,0 +1,15 @@
+.information{
+    height: 188px;
+    background-color: #009440;
+    margin-bottom: 80px;
+}
+
+.information h1{
+    font-size: 30px;
+    color: #FFFFFF;
+    opacity: 50%;
+    margin-top: 30px;
+    display: inline-block;
+    margin-right: 300px;
+    margin-left: 100px;
+}

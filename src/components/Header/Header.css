@@ -1,0 +1,21 @@
+header {
+    padding: 10px 0;
+}
+
+header ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 0 0 0 50px;  
+}
+
+nav a:hover{
+    color: #291288;
+}
+
