@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import { createTheme } from '@mui/material/styles';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import ManageAccountsOutlinedIcon from '@mui/icons-material/ManageAccountsOutlined';
+import NoteAltIcon from '@mui/icons-material/NoteAlt';
 import Groups2OutlinedIcon from '@mui/icons-material/Groups2Outlined';
+import Diversity3Icon from '@mui/icons-material/Diversity3';
+import HubIcon from '@mui/icons-material/Hub';
 import { AppProvider } from '@toolpad/core/AppProvider';
 import { DashboardLayout } from '@toolpad/core/DashboardLayout';
 import Logo from '../../assets/logobrazil.svg'
@@ -12,6 +14,7 @@ import Dashboard from '../../components/componentsAdm/dashbord/Dashboard';
 import ServiceRegistration from '../../components/componentsAdm/serviceRegistration/ServiceRegistration';
 import { CollaboratorList } from '../../components/componentsAdm/collabaratorList/CollaboratorList';
 import { ClientList } from '../../components/componentsAdm/clientList/ClientList';
+import { ClientLeads } from '../../components/componentsAdm/clientLeads/ClientLeads';
 
 const NAVIGATION = [
   {
@@ -22,7 +25,7 @@ const NAVIGATION = [
   {
     segment: 'serviceregistration',
     title: 'Cadastro de serviço',
-    icon: <ManageAccountsOutlinedIcon />,
+    icon: <NoteAltIcon />,
   },
   {
     segment: 'clientlist',
@@ -32,7 +35,12 @@ const NAVIGATION = [
   {
     segment: 'collaboratorlist',
     title: 'Lista de Colaboradores',
-    icon: <Groups2OutlinedIcon />,
+    icon: <Diversity3Icon />,
+  },
+  {
+    segment: 'clientLeads',
+    title: 'Captação de clientes',
+    icon: < HubIcon />,
   },
 ];
 
@@ -67,6 +75,7 @@ function DemoPageContent({ pathname }) {
       {pathname === '/serviceregistration' && <ServiceRegistration/>}
       {pathname === '/clientlist' && <ClientList/>}
       {pathname === '/collaboratorlist' && <CollaboratorList/>}
+      {pathname === '/clientLeads' && <ClientLeads/>}
     </Box>
   );
 }

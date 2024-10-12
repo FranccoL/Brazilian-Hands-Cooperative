@@ -61,7 +61,7 @@ export const ClientList = () => {
 
   return (
     <section className="listContainer">
-      <h3>Lista de Collaboradores</h3>
+      <h3>Lista de Clientes</h3>
       <Paper sx={{ width: "100%", overflow: "hidden" }}>
         {loading && <LinearProgress />}
         {error && (

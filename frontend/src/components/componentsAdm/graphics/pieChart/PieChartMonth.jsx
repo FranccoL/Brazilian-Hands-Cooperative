@@ -44,23 +44,28 @@ export const PieChartMonth = ({ dataDB }) => {
   return (
     <section className="chartPie">
       <h3>Trabalhos por área no mês atual</h3>
-      <PieChart
-        series={[
-          {
-            arcLabel: (item) => `${item.value}%`,
-            arcLabelMinAngle: 35,
-            arcLabelRadius: "60%",
-            data: chartData,
-            valueFormat
-          },
-        ]}
-        sx={{
-          [`& .${pieArcLabelClasses.root}`]: {
-            fontWeight: "bold",
-          },
-        }}
-        {...size}
-      />
+      <div className="pie">
+        <PieChart
+          series={[
+            {
+              arcLabel: (item) => `${item.value}%`,
+              arcLabelMinAngle: 35,
+              arcLabelRadius: "60%",
+              data: chartData,
+              valueFormat,
+              highlightScope: { faded: "global", highlighted: "item" },
+              faded: { innerRadius: 30, additionalRadius: -30, color: "gray" },
+            },
+          ]}
+          sx={{
+            [`& .${pieArcLabelClasses.root}`]: {
+              fontWeight: "bold",
+              fontSize: "12px",
+            },
+          }}
+          {...size}
+        />
+      </div>
     </section>
   );
 };
@@ -69,4 +74,3 @@ const size = {
   width: 400,
   height: 200,
 };
-

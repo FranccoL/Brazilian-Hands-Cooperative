@@ -67,6 +67,7 @@ export const ProfitPerAreaPerMonth = ({ dataDB }) => {
   const [dataset, setDataSet] = useState([]);
   const [showLucro, showCount] = useState(false);
 
+  
   useEffect(() => {
     if (dataDB.length > 0) {
       const getData = processData(dataDB);
