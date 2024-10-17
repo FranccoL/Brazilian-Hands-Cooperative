@@ -36,11 +36,7 @@ const schema = new mongoose.Schema(
     howFindCompany: {
       type: String,
       required: "Informe por favor como conheceu nossa empresa",
-      enum: ["Facebook", "Instagram", "Google", "Indicação"],
-    },
-    whichPlaces: {
-      type: String,
-      trim: true,
+      enum: ["facebook", "instagram", "google", "indicação"],
     },
     indicatorName: {
       type: String,

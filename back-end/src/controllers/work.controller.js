@@ -47,6 +47,7 @@ export const getWorkByDay = async (req, res) => {
       client: work.client.name,
       eircode: work.client.eircode || "Endereço não cadastrado",
       collaborator: work.collaborator.name,
+      whichPlaces:work.whichPlaces || "Não informado",
       work: work.work,
       price: work.price,
       status: work.status,
@@ -90,7 +91,7 @@ export const getWorkByMonth = async (req, res) => {
 export const createWork = async (req, res) => {
   //#swagger.tags=['Works']
   try {
-    const { client, work, collaborator, price, date, status } = req.body;
+    const { client, work, collaborator, whichPlaces,price, date, status } = req.body;
 
     // Função para formatar o valor monetário
     const formatPrice = (value) => {
@@ -139,7 +140,7 @@ export const createWork = async (req, res) => {
 
     // Verifica se o tipo de trabalho (work) é válido
     if (
-      !["Serviço de limpeza", "Paisagismo e jardinagem", "Pintura"].includes(
+      !["serviço de limpeza", "paisagismo e jardinagem", "pintura", "manicure e pedicure", "costura"].includes(
         work
       )
     ) {
@@ -178,6 +179,7 @@ export const createWork = async (req, res) => {
       client: isValidClient._id,
       collaborator: isValidCollaborator._id,
       work,
+      whichPlaces,
       price: formattedPrice, // Usa o preço formatado
       date,
       status,

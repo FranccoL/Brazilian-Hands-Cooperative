@@ -62,31 +62,7 @@ export const createClient = async (req, res) => {
 
     const client = await Client.create(data);
 
-    if ( client.typeOfWork === "Serviço de lempeza" ||  client.typeOfWork === "Pintura" ) {
-      const emailContent = `
-      <h1> Novo Cliente Cadastrado! </h1>
-       
-      <p><strong>Nome:</strong> ${client.name}</p>
-      <p><strong>Telefone:</strong> ${client.phone}</p>
-      <p><strong> Eircode:</strong> ${client.eircode}</p>
-      <p><strong> Tipo de Serviço:</strong> ${client.typeOfWork}</p>
-      <p><strong> Cômodos do local:</strong> ${client.whichPlaces || "Não informado"}</p>
-      <p><strong> Data do Serviço:</strong> ${client.dateOfService}</p>
-      <p><strong> Como encontrou a empresa:</strong> ${client.howFindCompany}
-      <p><strong> Nome do Indicador: </strong>${
-        client.indicatorName || "Não informado"
-      }</p>
-      <p><strong>  Particularidades:</strong> ${
-        client.particularities || "Nenhuma"
-      }</p>
-     `;
- 
-       const subject = "Novo Cliente Cadastrado!";
- 
-       await sendEmail(process.env.EMAIL_ADM, subject, emailContent);
-
-    } else {
-      const emailContent = `
+    const emailContent = `
      <h1> Novo Cliente Cadastrado! </h1>
       
       <p><strong>Nome:</strong> ${client.name}</p>
@@ -103,10 +79,9 @@ export const createClient = async (req, res) => {
      }</p>
     `;
 
-      const subject = "Novo Cliente Cadastrado!";
+    const subject = "Novo Cliente Cadastrado!";
 
-      await sendEmail(process.env.EMAIL_ADM, subject, emailContent);
-    }
+    await sendEmail(process.env.EMAIL_ADM, subject, emailContent);
 
     return res.status(200).json(client);
   } catch (error) {

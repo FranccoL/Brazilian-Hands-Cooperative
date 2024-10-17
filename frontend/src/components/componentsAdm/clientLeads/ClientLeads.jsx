@@ -41,6 +41,8 @@ const chartSetting = {
 const processData = (dataDB) => {
   const groupData = {};
 
+  console.log("Oiiii", dataDB)
+
   dataDB.forEach((item) => {
     const month = new Date(item.createdAt).toLocaleString("default", {
       month: "short",
@@ -77,18 +79,26 @@ const processData = (dataDB) => {
   // Transformar o groupData para ter um dataset simplificado
   const transformedData = Object.entries(groupData).map(([month, works]) => ({
     month,
-    limpezaFacebook: works["Serviço de limpeza"]?.facebook || 0,
-    limpezaInstagram: works["Serviço de limpeza"]?.instagram || 0,
-    limpezaGoogle: works["Serviço de limpeza"]?.google || 0,
-    limpezaIndicacao: works["Serviço de limpeza"]?.indicacao || 0,
-    paisagismoFacebook: works["Paisagismo e jardinagem"]?.facebook || 0,
-    paisagismoInstagram: works["Paisagismo e jardinagem"]?.instagram || 0,
-    paisagismoGoogle: works["Paisagismo e jardinagem"]?.google || 0,
-    paisagismoIndicacao: works["Paisagismo e jardinagem"]?.indicacao || 0,
-    pinturaFacebook: works["Pintura"]?.facebook || 0,
-    pinturaInstagram: works["Pintura"]?.instagram || 0,
-    pinturaGoogle: works["Pintura"]?.google || 0,
-    pinturaIndicacao: works["Pintura"]?.indicacao || 0,
+    limpezaFacebook: works["serviço de limpeza"]?.facebook || 0,
+    limpezaInstagram: works["serviço de limpeza"]?.instagram || 0,
+    limpezaGoogle: works["serviço de limpeza"]?.google || 0,
+    limpezaIndicacao: works["serviço de limpeza"]?.indicacao || 0,
+    paisagismoFacebook: works["paisagismo e jardinagem"]?.facebook || 0,
+    paisagismoInstagram: works["paisagismo e jardinagem"]?.instagram || 0,
+    paisagismoGoogle: works["paisagismo e jardinagem"]?.google || 0,
+    paisagismoIndicacao: works["paisagismo e jardinagem"]?.indicacao || 0,
+    pinturaFacebook: works["pintura"]?.facebook || 0,
+    pinturaInstagram: works["pintura"]?.instagram || 0,
+    pinturaGoogle: works["pintura"]?.google || 0,
+    pinturaIndicacao: works["pintura"]?.indicacao || 0,
+    pinturaFacebook: works["manicure e pedicure"]?.facebook || 0,
+    pinturaInstagram: works["manicure e pedicure"]?.instagram || 0,
+    pinturaGoogle: works["manicure e pedicure"]?.google || 0,
+    pinturaIndicacao: works["manicure e pedicure"]?.indicacao || 0,
+    pinturaFacebook: works["costura"]?.facebook || 0,
+    pinturaInstagram: works["costura"]?.instagram || 0,
+    pinturaGoogle: works["costura"]?.google || 0,
+    pinturaIndicacao: works["costura"]?.indicacao || 0,
   }));
 
   return transformedData;

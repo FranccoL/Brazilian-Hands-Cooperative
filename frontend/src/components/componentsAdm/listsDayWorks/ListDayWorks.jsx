@@ -24,6 +24,7 @@ export const ListDayWorks = () => {
     { id: "eircode", label: "Endereço do Cliente", minWidth: 200 },
     { id: "collaborator", label: "Colaborador", minWidth: 170 },
     { id: "work", label: "Serviço", minWidth: 170 },
+    { id: "whichPlaces", label: "Detalhes extras", minWidth: 200 },
     {
       id: "price",
       label: "Preço",
@@ -89,7 +90,7 @@ export const ListDayWorks = () => {
     setPage(0);
   };
 
-  console.log(data);
+  console.log('list', data);
 
   return (
     <section className="listContainer">

@@ -24,6 +24,7 @@ export const ClientList = () => {
     { id: "phone", label: "Telefone", minWidth: 170 },
     { id: "eircode", label: "Eircode", minWidth: 100 },
     { id: "typeOfWork", label: "Primeiro serviço", minWidth: 200 },
+    { id: "particularities", label: "Detalhes extras", minWidth: 200 },
     { id: "createdAt", label: "Data do primeiro serviço", minWidth: 200, format: (value)=> new Date(value).toLocaleDateString('pt-BR')},
   ];
 

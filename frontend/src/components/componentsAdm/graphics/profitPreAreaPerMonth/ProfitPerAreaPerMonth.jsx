@@ -50,14 +50,18 @@ const processData = (dataDB) => {
   const transformedData = Object.entries(groupData).map(([month, works]) => ({
     month,
     limpezaValor:
-      works["Serviço de limpeza"]?.totalPrice ||
-      (0 && works["Serviço de limpeza"]?.count) ||
+      works["serviço de limpeza"]?.totalPrice ||
+      (0 && works["serviço de limpeza"]?.count) ||
       0,
-    limpezaContagem: works["Serviço de limpeza"]?.count || 0,
-    paisagismoValor: works["Paisagismo e jardinagem"]?.totalPrice || 0,
-    paisagismoContagem: works["Paisagismo e jardinagem"]?.count || 0,
-    pinturaValor: works["Pintura"]?.totalPrice || 0,
-    pinturaContagem: works["Pintura"]?.count || 0,
+    limpezaContagem: works["serviço de limpeza"]?.count || 0,
+    paisagismoValor: works["paisagismo e jardinagem"]?.totalPrice || 0,
+    paisagismoContagem: works["paisagismo e jardinagem"]?.count || 0,
+    pinturaValor: works["pintura"]?.totalPrice || 0,
+    pinturaContagem: works["pintura"]?.count || 0,
+    maniPediValor: works["manicure e pedicure"]?.totalPrice || 0,
+    maniPediContagem: works["manicure e pedicure"]?.count || 0,
+    costuraValor: works["costura"]?.totalPrice || 0,
+    costuraContagem: works["costura"]?.count || 0,
   }));
 
   return transformedData;
@@ -102,6 +106,11 @@ export const ProfitPerAreaPerMonth = ({ dataDB }) => {
               },
 
               { dataKey: "pinturaValor", label: "Pintura", valueFormatter },
+
+              { dataKey: "maniPediValor", label: "Beleza", valueFormatter },
+
+              { dataKey: "costuraValor", label: "Costura", valueFormatter }
+
             ]}
             {...chartSetting}
           />
@@ -117,6 +126,10 @@ export const ProfitPerAreaPerMonth = ({ dataDB }) => {
               { dataKey: "paisagismoContagem", label: "Paisagismo" },
 
               { dataKey: "pinturaContagem", label: "Pintura" },
+
+              { dataKey: "maniPediContagem", label: "Beleza" },
+
+              { dataKey: "costuraContagem", label: "Costura" },
             ]}
             {...chartSetting}
           />

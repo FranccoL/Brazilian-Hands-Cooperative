@@ -9,6 +9,7 @@ function ServiceRegistration() {
     client: "",
     collaborator: "",
     work: "",
+    whichPlaces: "",
     price: "",
     date: "",
     status: "Agendado",
@@ -38,7 +39,6 @@ function ServiceRegistration() {
     }
   };
 
-
   const handleCollabaratorsWork = async (event) => {
     const work = event.target.value;
     setFormData({ ...formData, work });
@@ -58,8 +58,7 @@ function ServiceRegistration() {
         setCollaboratorEircode("");
       }
     } catch (error) {
-      // Verifica se o erro contém uma resposta da API
-      console.error("Erro ao buscar colaborador:", error.response.data.message);
+      console.error("Erro ao buscar colaborador:", error.response?.data?.message || error.message);
     }
   };
 
@@ -94,9 +93,14 @@ function ServiceRegistration() {
     }
   
     // Validação da data
-    const selectedDate = new Date(formData.date);
+    const [year, month, day] = formData.date.split('-').map(Number);
+    const selectedDate = new Date(year, month - 1, day);
     const today = new Date();
     today.setHours(0, 0, 0, 0);
+
+    console.log("formData.date:", formData.date);
+    console.log("selectedDate:", selectedDate.toISOString());
+    console.log("today:", today.toISOString());
     
     if (selectedDate < today) {
       alert("A data do serviço não pode ser anterior a hoje");
@@ -113,7 +117,8 @@ function ServiceRegistration() {
         setFormData({
           client: "",
           collaborator: "",
-          work: "Serviço de limpeza",
+          work: "",
+          whichPlaces: "",
           price: "",
           date: "",
           status: "Agendado",
@@ -146,7 +151,6 @@ function ServiceRegistration() {
     }
   };
 
-
   return (
     <main className="containerServiceRegister">
       <section className="form">
@@ -168,11 +172,14 @@ function ServiceRegistration() {
               value={formData.work}
               onChange={handleCollabaratorsWork}
             >
-              <option value="Serviço de limpeza">Serviço de limpeza</option>
-              <option value="Paisagismo e jardinagem">
+              <option value="" disabled hidden>Selecione o tipo de serviço</option>
+              <option value="serviço de limpeza">Serviço de limpeza</option>
+              <option value="paisagismo e jardinagem">
                 Paisagismo e jardinagem
               </option>
-              <option value="Pintura">Pintura</option>
+              <option value="pintura">Pintura</option>
+              <option value="manicure e pedicure">Manicure e Pedicure</option>
+              <option value="costura">Costura</option>
             </select>
           </div>
 
@@ -182,6 +189,13 @@ function ServiceRegistration() {
             value={formData.collaborator}
             onChange={handleChange}
             name="collaborator"
+          />
+          <InputAdm
+            labelText="Detalhes sobre o serviço"
+            placeholder="Digite detalhes extras"
+            value={formData.whichPlaces}
+            onChange={handleChange}
+            name="whichPlaces"
           />
           <InputAdm
             labelText="Valor do serviço contratado"

@@ -32,7 +32,7 @@ const schema = new mongoose.Schema(
     },
     date: {
       type: Date,
-      required: "Coloque a data que o serciço será executado.",
+      required: "Coloque a data que o serviço será executado.",
       validator: {
         validate: function (date) {
           return date >= new Date();
