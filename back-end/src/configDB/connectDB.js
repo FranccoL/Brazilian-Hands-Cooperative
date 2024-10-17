@@ -1,6 +1,13 @@
 import mongoose from "mongoose";
 
 export const connectDB = async (req = null, res = null, next = null) => {
+  if (mongoose.connect.readyState === 1) {
+    if (typeof next === "function") {
+      next();
+    }
+    return mongoose;
+  }
+
   try {
     await mongoose.connect(process.env.MONGODB_URI);
     console.log("Conectado ao banco de dados");
@@ -17,7 +24,3 @@ export const connectDB = async (req = null, res = null, next = null) => {
       .json({ message: "Erro ao conectar ao banco de dados" });
   }
 };
-
-/**
- * verificar se uri esta certa com if e depois  verificação de conexão para não repetir
- */

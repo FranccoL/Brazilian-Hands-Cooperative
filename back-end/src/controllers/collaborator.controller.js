@@ -94,7 +94,7 @@ export const createCollaborator = async (req, res) => {
   }
 };
 
-export const updateCollabarator = async (req, res) => {
+export const updateCollaborator = async (req, res) => {
    //#swagger.tags=['Collaborator']
   try {
     const { id } = req.params;

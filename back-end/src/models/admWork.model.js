@@ -11,7 +11,7 @@ const schema = new mongoose.Schema(
     },
     work: {
       type: String,
-      enum: ["Serviço de limpeza", "Paisagismo e jardinagem", "Pintura"],
+      enum: ["serviço de limpeza", "paisagismo e jardinagem", "pintura", "manicure e pedicure", "costura"],
       required: "Escolha o modelo de serviço que será executado",
     },
     collaborator: {
@@ -21,7 +21,10 @@ const schema = new mongoose.Schema(
       required:
         "Para gerar um serviço é nescessario o nome completo do colaborador",
     },
-
+    whichPlaces: {
+      type: String,
+      trim: true,
+    },
     price: {
       type: Number,
       required: true,

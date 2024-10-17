@@ -32,7 +32,7 @@ const schema = new mongoose.Schema(
     work: {
       type: String,
       trim: true,
-      enum: ["Serviço de limpeza", "Paisagismo e jardinagem", "Pintura"],
+      enum: ["serviço de limpeza", "paisagismo e jardinagem", "pintura", "manicure e pedicure", "costura"],
       required: "Qual serviço vc pode prestar?",
     },
     equipment: {
@@ -49,11 +49,11 @@ const schema = new mongoose.Schema(
       trim: true,
       required: "Como você pode se deslocar para o serviço?",
       enum: [
-        "Carro",
-        "Moto",
-        "Transporte Público",
-        "A Pé",
-        "Carro de Aplicativo",
+        "carro",
+        "moto",
+        "transporte público",
+        "caminhando",
+        "carro de aplicativo",
       ],
     },
   },

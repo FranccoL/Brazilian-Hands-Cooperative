@@ -42,7 +42,7 @@ export const createAdm = async (req, res) => {
 
     const admCreate = await Adm.create(adm);
 
-    return res.status(200).json(admCreate);
+    return res.status(201).json({ message: "Administrador criado com sucesso", admCreate });
   } catch (error) {
     validationError(res, error);
   }

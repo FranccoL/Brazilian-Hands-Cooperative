@@ -18,6 +18,7 @@ export const getAllWorks = async (_, res) => {
 };
 
 export const getWorkByDay = async (req, res) => {
+    //#swagger.tags=['Works']
   try {
     const { date } = req.query;
 

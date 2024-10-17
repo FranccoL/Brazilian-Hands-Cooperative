@@ -1,10 +1,10 @@
 import express from "express";
 import cors from "cors";
-import bodyParser from 'body-parser';
-
 import dotenv from "dotenv";
 import bearerToken from 'express-bearer-token';
 
+
+// Importando rotas
 import { routerCollaborator } from "./src/routes/collaborator.routes.js";
 import { routerAdm } from "./src/routes/adm.routes.js";
 import { routerClient } from "./src/routes/client.routes.js";
@@ -22,15 +22,6 @@ const app = express();
 app.use(cors());
 app.use(bearerToken());
 app.use(express.json());
-
-// Configuração do body-parser
-app.use(bodyParser.json()); // Para interpretar JSON
-app.use(bodyParser.urlencoded({ extended: true })); // Para interpretar URL-encoded
-
-// // Rota básica para teste
-// app.get("/", (_, res) => {
-//   return res.send("Hello Brazilian");
-// });
 
 
 //routes Adm
@@ -57,36 +48,9 @@ if(process.env.NODE_ENV !== "test"){
 }
 
 
-// Se a conexão for bem-sucedida, inicia o servidor
 app.listen(process.env.PORT, () => {
   console.log(`Conectado ao banco de dados.`);
   console.log(`Servidor rodando na porta ${process.env.PORT}`);
 });
 
 
-
-
-/**
- * TESTE PARA VER SE BANCO ESTA CONECTANDO:
- * import { connectDB } from "./src/configDB/connectDB.js";
- * 
- * 
- * const startServer = async () => {
- *  try {
- *      // Tenta conectar ao banco de dados
- *     await connectDB();
- *
- *    // Se a conexão for bem-sucedida, inicia o servidor
- *    app.listen(process.env.PORT, () => {
- *       console.log(`Conectado ao banco de dados.`);
- *       console.log(`Servidor rodando na porta ${process.env.PORT}`);
- *  });
- * } catch (error) {
- *    console.error("Erro ao iniciar o servidor:", error);
- *}
- *};
- *
- * Chama a função para iniciar o servidor
- *startServer();
- *
- */

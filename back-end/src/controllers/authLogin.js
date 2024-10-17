@@ -9,6 +9,11 @@ export const authLogin = async (req, res) => {
   try {
     const { email } = req.body;
 
+    const emailRegex = /.+\@.+\..+/;
+    if (!emailRegex.test(email)) {
+      return res.status(400).json({ message: "Email inválido" });
+    }
+
     // Verificar se o usuário existe
     let adm = await Adm.findOne({ email });
 
@@ -29,7 +34,7 @@ export const authLogin = async (req, res) => {
     await adm.save();
 
     // Definir o assunto e o conteúdo do e-mail
-    const subject = 'Seu Token de Login';
+    const subject = "Seu Token de Login";
     const emailContent = `
       <p>Olá,</p>
       <p>Seu token de login é: <strong>${token}</strong></p>

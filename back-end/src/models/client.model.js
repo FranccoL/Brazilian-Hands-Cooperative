@@ -21,7 +21,7 @@ const schema = new mongoose.Schema(
     typeOfWork: {
       type: String,
       required: "Tipo de exercicio é essencial",
-      enum: ["Serviço de limpeza", "Paisagismo e jardinagem", "Pintura"],
+      enum: ["serviço de limpeza", "paisagismo e jardinagem", "pintura", "manicure e pedicure", "costura"],
     },
     dateOfService: {
       type: Date,
@@ -35,8 +35,12 @@ const schema = new mongoose.Schema(
     },
     howFindCompany: {
       type: String,
-      required: ".......",
+      required: "Informe por favor como conheceu nossa empresa",
       enum: ["Facebook", "Instagram", "Google", "Indicação"],
+    },
+    whichPlaces: {
+      type: String,
+      trim: true,
     },
     indicatorName: {
       type: String,
