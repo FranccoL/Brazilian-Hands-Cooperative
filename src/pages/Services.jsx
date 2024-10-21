@@ -1,6 +1,14 @@
+import Header from "../components/Header/Header"
+import Footer from "../components/Footer/Footer"
+
+
+
 function Services (){
     return (
-        <h1>Services</h1>
+        <>
+        <Header />
+        <Footer />
+        </>
     )
 }
 

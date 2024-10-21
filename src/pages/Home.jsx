@@ -12,7 +12,9 @@ import Feedbacks from "../components/Feedbacks/Feedbacks"
 
 
 
+
 function Home (){
+    
     return (
         <>
         <Header />
@@ -23,8 +25,7 @@ function Home (){
         <Carousel />
         <ReferEarn />
         <Feedbacks />
-        <Footer />
-        
+        <Footer /> 
         </>
     )
 }

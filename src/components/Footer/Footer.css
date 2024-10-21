@@ -64,3 +64,16 @@ footer a:hover {
 .ftft{
     margin-bottom: -20px;
 }
+
+.btfooter{
+    border-radius: 30px ;
+    border: solid black 1px;
+    cursor: pointer;
+    font-size: 22px;
+    height: 41px;
+    width: 179px;
+    text-align: center; 
+    background-color: #FEE455;
+    color: black;
+
+}

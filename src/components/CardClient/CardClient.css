@@ -2,7 +2,7 @@
     border-radius: 30px;
     border: black 3px solid;
     width: 1100px;
-    height: 738px;
+    height: 638px;
     margin-top: 80px;
     margin-bottom: 80px;
     padding: -60px;
@@ -14,6 +14,7 @@
     text-align: center;
     font-size: 50px;
     margin-top: 50px;
+    
     
 }
 .card h2 {
@@ -32,7 +33,7 @@
     border: solid black 2px;
     border-radius: 30px;   
     width: 604px; 
-    height: 500px;
+    height: 400px;
     margin-right: 350px;
     margin-top: 80px;
     margin-left: 40px;
@@ -72,23 +73,25 @@ form{
 }
 
 .form-input2{
-    width: 270px;
-    margin-left: 300px;
+    width: 300px;
+    margin-left: 20px;
     border: none;
     border-bottom: 1px solid #292F36;
     outline:none;
     color: #292F36;
-    font-size: 15px;
+    font-size: 12px;    
     line-height: 50px;
+    
 }
+
 
 .btform {
     width: 229px;
     height: 50px;
-    margin-top: 10px;
+    margin-top: -50px;
     align-items: center;
     padding-left: 70px;
-    margin-left: auto;
+    margin-left: 350px;
     background-color: #291288;
     color: white;
     border-radius: 30px ;
@@ -101,4 +104,8 @@ form{
 }
 .btform:hover{
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.discond10{
+    margin-left: 200px;
 }

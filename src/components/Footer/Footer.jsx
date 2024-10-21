@@ -38,8 +38,9 @@ function Footer (){
                                 <li><Link to="/">Home</Link></li>
                                 <li><Link to="/services">Services</Link></li>
                                 <li><Link to="/about">About</Link></li>
-                                <li><Button buttonStyle="secondary" Link to="about"> Work With Us </Button></li>
+                                <li></li>
                             </ul>
+                            <Button className="btfooter" >< Link to="workWithUs"> Work With Us</Link></Button>
                         </div>
                         <div className="footer-col">
                             <h3>Contact</h3>

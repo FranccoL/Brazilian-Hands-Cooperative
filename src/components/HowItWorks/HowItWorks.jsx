@@ -10,10 +10,6 @@ import Num3 from '../../assets/num3.svg'
 
 
 
-
-
-
-
 function HowItWorks() {
     return (
         <div className="container"> 
