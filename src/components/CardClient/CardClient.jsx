@@ -2,15 +2,18 @@ import './CardClient.css'
 import Button from '../Button/Button'
 import React, { useState } from 'react';
 
+//Translation
+import { useTranslation } from 'react-i18next';
 
 function CardClient() {
+    const { t } = useTranslation();
 
     return (
         <div className="container d-flex fd-column">
             
         <div className="card primary-background " id="secao1">
             
-            <h1>Request your free quote now!</h1>
+            <h1>{t("Request")}</h1>
             
             <div className="card2 d-flex ">
                 <form >
@@ -66,7 +69,7 @@ function CardClient() {
                     </form>
                      
                     </div>
-                    <h2>On your first quote, you GET a 10% DISCOUNT!</h2> 
+                    <h2>{t("10_Discount")}</h2> 
 
         </div>              
         </div>

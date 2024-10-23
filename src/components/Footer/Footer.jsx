@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
 import './Footer.css'
 import Button from '../Button/Button'
-
+import { useTranslation } from 'react-i18next';
+import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
 
 //ASSETS
 import Logo from '../../assets/loogo.svg'
@@ -12,13 +13,16 @@ import Instagram from '../../assets/instagram.svg'
 import WhatsApp from '../../assets/whatsApp.svg'
 
 function Footer (){
+    const { t } = useTranslation();
+
+
     return (
         <footer className="primary-background tertiary-color">
             <div className="container">
                 <div className="d-flex jc-space-between">
                     <div className="footer-logo-col">
                         <img src={Logo} className="footer-logo" />
-                        <p>We take care of your cleaning, you take care of your comfort!</p>
+                        <p>{t("Ft_SubTitle")}</p>
                         <div className="d-flex social-links">
                             <a href="https://www.facebook.com/profile.php?id=61563594075044" target="_blank">
                                 <img src={Face} height="50px"/>
@@ -33,17 +37,16 @@ function Footer (){
                     </div>
                     <div className="d-flex">
                         <div className="footer-col">
-                            <h3>Pages</h3>
+                            <h3>{t("Title_Lk")}</h3>
                             <ul>
-                                <li><Link to="/">Home</Link></li>
-                                <li><Link to="/services">Services</Link></li>
-                                <li><Link to="/about">About</Link></li>
-                                <li></li>
+                                <li><Link to="/">{t("Lk_Home")}</Link></li>
+                                <li><Link to="/about">{t("Lk_About")}</Link></li>
+                                <li><Link to="/services">{t("Lk_Services")}</Link></li>
                             </ul>
-                            <Button className="btfooter" >< Link to="workWithUs"> Work With Us</Link></Button>
+                            <Button className="btfooter" >< Link to="workWithUs"> {t("Ft_Bt")}</Link></Button>
                         </div>
                         <div className="footer-col">
-                            <h3>Contact</h3>
+                            <h3>{t("Ft_Contact")}</h3>
                             <p>brazilianhandscooperative@gmail.com</p>
                             <p>(+353) 833471038</p>
                             </div>
@@ -52,8 +55,7 @@ function Footer (){
                             <div className=" ftft d-flex jc-space-between footer-copy">
                             <p>Copyright © - 2024</p>
                         <div className="langs-area d-flex ">
-                            <img src={Brazil} height="50px" />
-                            <img src={Irland} height="50px"/> 
+                        <LanguageSwitcher />
                         </div>
                     </div>
                 </div>

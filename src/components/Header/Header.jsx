@@ -1,11 +1,20 @@
 import { Link } from 'react-router-dom'
 import Button from '../Button/Button'
+import './Header.css'
+
+//Translation
+import { useTranslation } from 'react-i18next';
+import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
+
 
 //ASSETS
 import Logo from '../../assets/loogo.svg'
-import './Header.css'
+
 
 function Header (){
+    const { t } = useTranslation();
+
+
     return (
         <header className="secondary-background">
             <div className="container">
@@ -15,13 +24,14 @@ function Header (){
                     <nav>
                     <ul className="d-flex">
                         
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/about">About</Link></li> 
-                        <li><Link to="/services">Services</Link></li>
+                        <li><Link to="/">{t("Lk_Home")}</Link></li>
+                        <li><Link to="/about">{t("Lk_About")}</Link></li> 
+                        <li><Link to="/services">{t("Lk_Services")}</Link></li>
                          
                     </ul>
                     </nav>
-                    <Button className="btheader" >< Link to="workWithUs">Work With Us</Link></Button>
+                    <Link to="workWithUs"><button className="btheader"> {t("Ft_Bt")}</button></Link>
+                    < LanguageSwitcher />
                 </div>
             </div>
         </header>

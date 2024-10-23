@@ -1,4 +1,6 @@
 import './HowItWorks.css'
+import { useTranslation } from 'react-i18next';
+import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
 
 /*ASSENTS */
 import How1 from '../../assets/how1.svg'
@@ -11,10 +13,12 @@ import Num3 from '../../assets/num3.svg'
 
 
 function HowItWorks() {
+    const { t } = useTranslation();
     return (
+        
         <div className="container"> 
         <div className="title-howWorks">
-            <h1>HOW DOES IT WORK?</h1> 
+            <h1>{t("How_it_Work")}</h1> 
 
             <div className="d-flex jc-space-between">
                 <div className="hows">
@@ -30,12 +34,12 @@ function HowItWorks() {
             </div>
 
             <div className="description">
-                <h1>Choose the Room:</h1>
-                <p>Select the space that needs attention. Whether it's the living room, kitchen, bathroom, or bedrooms, we take care of every detail.</p>
-                <h1>Define the type of service:</h1>
-                <p>Choose from our options: general cleaning, nails, painting, sewing, and gardening. We tailor our services to meet your specific needs.</p>
-                <h1>Easy Scheduling:</h1>
-                <p>Schedule your cleaning in just a few clicks! Choose the date and time that best fit your routine, and leave the rest to us.</p>         
+                <h1>{t("Item_One")}</h1>
+                <p>{t("Sub_One")}</p>
+                <h1>{t("Item_Two")}</h1>
+                <p>{t("Sub_Two")}</p>
+                <h1>{t("Item_Tree")}</h1>
+                <p>{t("Sub_Tree")}</p>         
             </div>
 
             </div> 

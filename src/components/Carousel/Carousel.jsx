@@ -9,6 +9,9 @@ import 'swiper/css/navigation';
 
 import {EffectCoverflow, Pagination, Navigation} from 'swiper/modules';
 
+//Translation
+import { useTranslation } from 'react-i18next';
+
 
 //ASSETS
 import Garden from '../../assets/garden.svg'
@@ -18,9 +21,12 @@ import Painting from '../../assets/Painting.svg'
 import Cleaning from '../../assets/cleaning.svg'
 
 function Carousel() {
+    const { t } = useTranslation();
+
+
     return (
         <div className="container">
-            <h1 className="heading">DISCOVER OUR SERVICES</h1>
+            <h1 className="heading">{t("Title_Carousel")}</h1>
             <Swiper
             effect={'coverflow'}
             grabCursoe={ true }
