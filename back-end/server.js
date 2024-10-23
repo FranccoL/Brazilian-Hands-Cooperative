@@ -1,4 +1,6 @@
 import express from "express";
+import { connectDB } from "./src/configDB/connectDB.js";
+
 import cors from "cors";
 import dotenv from "dotenv";
 import bearerToken from 'express-bearer-token';
@@ -11,10 +13,18 @@ import { routerClient } from "./src/routes/client.routes.js";
 import { routerLogin } from "./src/routes/authLogin.routes.js";
 import { workRouter } from "./src/routes/works.routes.js";
 
+//automação de e-mail
+import './src/utils/informWork.js'
+
 //import doc
 import swaggerUi from 'swagger-ui-express';
 
 dotenv.config();
+
+// Conectar ao banco de dados ao iniciar o servidor
+connectDB().catch(console.error);
+
+
 
 const app = express();
 

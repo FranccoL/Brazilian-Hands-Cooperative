@@ -40,12 +40,13 @@ export const getWorkByDay = async (req, res) => {
       // status: "Agendado"
     })
       .populate("client", "name eircode") // Especificando os campos que queremos do cliente
-      .populate("collaborator", "name"); // Especificando os campos que queremos do colaborador
+      .populate("collaborator", "name email"); // Especificando os campos que queremos do colaborador
 
     // Formatar os dados antes de enviar
     const formattedWorks = works.map((work) => ({
       client: work.client.name,
       eircode: work.client.eircode || "Endereço não cadastrado",
+      email: work.collaborator.email,
       collaborator: work.collaborator.name,
       whichPlaces:work.whichPlaces || "Não informado",
       work: work.work,
@@ -55,10 +56,11 @@ export const getWorkByDay = async (req, res) => {
 
     return res.status(200).json(formattedWorks);
   } catch (error) {
-    // validationError(res, error);
+     validationError(res, error);
     console.error(error);
   }
 };
+
 
 export const getWorkByMonth = async (req, res) => {
   //#swagger.tags=['Works']
@@ -87,7 +89,7 @@ export const getWorkByMonth = async (req, res) => {
   }
 };
 
-//Test
+
 export const createWork = async (req, res) => {
   //#swagger.tags=['Works']
   try {
@@ -190,6 +192,8 @@ export const createWork = async (req, res) => {
     validationError(res, error);
   }
 };
+
+
 export const updateWork = async (req, res) => {
   //#swagger.tags=['Works']
   try {

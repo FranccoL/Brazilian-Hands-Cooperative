@@ -50,6 +50,9 @@ const schema = new mongoose.Schema(
   }
 );
 
+// Adiciona o índice para o campo 'date'
+schema.index({ date: 1 });
+
 const SchemaWork = mongoose.models.Works || mongoose.model("Works", schema);
 
 export default SchemaWork;

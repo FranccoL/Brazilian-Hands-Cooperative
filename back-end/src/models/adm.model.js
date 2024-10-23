@@ -12,8 +12,7 @@ const schema = new mongoose.Schema(
       trim: true,
       lowercase: true,
       required: true,
-      match: [/.+\@.+\..+/, "Por favor, insira um e-mail válido."],
-      unique: true,
+      match: [/.+\@.+\..+/, "Por favor, insira um e-mail válido."]
     },
     token: {
       type: String,

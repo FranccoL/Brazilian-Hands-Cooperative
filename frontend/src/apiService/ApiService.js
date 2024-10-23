@@ -23,7 +23,6 @@ api.interceptors.request.use((config)=>{
 
 const apiCoordinates = axios.create({
     baseURL:'https://api.opencagedata.com/geocode',
-    timeout: 10000,
     headers:{
         'Content-Type':'application/json'
     }
