@@ -55,7 +55,10 @@
     height: 50px;
     background: #E8ECF5;
     border-radius: 10px;
-    border: 1px solid #00000033
+    border: 1px solid #00000033;
+    padding-left: 10px;
+    font-size: 20px;
+    color: red;
 }
 
 .formFormWork p {
@@ -97,7 +100,10 @@
     background: #E8ECF5;
     margin-bottom: 80px;
     border-radius: 10px;
-    border: 1px solid #00000033
+    border: 1px solid #00000033;
+    color: red;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .tools {
@@ -114,7 +120,9 @@
     border-radius: 10px;
     border: 1px solid #00000033;
     padding-left: 10px;
-    color: #000000;
+    color: red;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .otherFormWork h4 {
@@ -145,14 +153,14 @@
     line-height: 28.13px;
     text-align: center;
     background: #BBDDC7;
-    color: white;
+    color: #000000;
     align-items: end;
     cursor: pointer;
 }
 
 button:hover {
     background-color: #9ebda9;
-    color: #000000;
+    color: red;
     transform: translateY(-5px);
     box-shadow: 0px 15px 20px #00000046;
     transition-duration: 0,5s;
