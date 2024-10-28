@@ -4,7 +4,6 @@ import AboutBHC from "../components/AboutBHC/AboutBHC"
 
 
 
-
 function About (){
     return (
         <>
