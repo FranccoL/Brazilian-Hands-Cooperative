@@ -15,6 +15,11 @@ header h1{
     margin-left: 10px;
 }
 
+
+nav {
+    display: flex;
+}
+
 nav a {
     
     font-size: 20px;
@@ -24,11 +29,15 @@ nav a {
     
 }
 nav ul{
-    margin-left: 300px;
+    margin-left: 250px;
+    
    
 }
+.abt-ql{
+    white-space: nowrap;
+}
 nav a:hover{
-    color: #291288;
+    color: #000000;
 }
 
 .btheader {
@@ -51,4 +60,69 @@ nav a:hover{
     background-color: #dfe21d;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
+.mobile-menu {
+    display: none;
+}
 
+@media (max-width: 768px) {
+    nav.open{
+        display: flex;
+        align-items: end;
+    }
+
+    nav {
+        background-color: #291288;
+        border-left: 10px solid #333;
+        display: none;
+        flex-direction: column;
+        height: 100%;
+        padding: 37px;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 60vw;
+        z-index: 1;
+        box-shadow: -40vw 0px 0px 0px rgba(0,0,0,0.75);
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        
+    }
+
+    nav ul li {
+        display: flex;
+        
+        
+    }
+
+    nav a {
+        border-bottom: 1px solid rgb(255, 255, 255);
+        color: white;
+        font-size: 20px;
+        margin: 0 0 20px 0;
+        padding: 12px;
+        text-decoration: none;
+        width: 100%;
+        
+    }
+    .mobile-menu {
+        display: block;
+    }
+
+    .close-btn {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 25px;
+        margin: 0 0 12px;
+        padding: 12px;
+        width: fit-content;
+        cursor: pointer;
+        width: 100px;
+    }
+    .btheader{
+        display: none;
+    }
+}

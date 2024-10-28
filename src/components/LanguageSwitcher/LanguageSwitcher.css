@@ -13,10 +13,11 @@
 .language_switcher > Button{
     cursor: pointer;
     background: none;
-    border: solid 3px;
+    border: solid 2px;
     border-radius: 50%;
     width: 31px;
     height: 31px;
+    padding: 1px;
     
 }
 .language_switcher > Button:hover{

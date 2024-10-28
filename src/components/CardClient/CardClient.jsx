@@ -39,21 +39,21 @@ function CardClient() {
                         <option value="option4">Painting</option>
                         <option value="option5">Sewing</option>
                     </select>
-                    <input className="d-flex form-input2"
+                    <input className="d-flex form-input2 "
                         type="text"
-                        id="name"
+                        id="describe"
                         name="name"
-                        placeholder="Please describe the specifics of the service you require. *"                       
+                        placeholder="Please describe the specifics of the service you require.*"                       
                         />
                         <input className="d-flex form-input2"
                         type="text"
-                        id="name"
+                        id="eircode"
                         name="name"
                         placeholder="Eircode *"                       
                         />
                         <input className="d-flex form-input2"
                         type="text"
-                        id="name"
+                        id="recommendation"
                         name="name"
                         placeholder="Recommendation *"                       
                         />
@@ -69,7 +69,7 @@ function CardClient() {
                     </form>
                      
                     </div>
-                    <h2>{t("10_Discount")}</h2> 
+                    <h2 className="discount">{t("10_Discount")}</h2> 
 
         </div>              
         </div>

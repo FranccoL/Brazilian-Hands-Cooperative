@@ -37,6 +37,45 @@
         "Lk_About":"Sobre nós",
         "Lk_Services":"Serviços",
         "Ft_Bt":"Trabalhe Conosco",
-        "Ft_Contact":"Contatos"
+        "Ft_Contact":"Contatos",
+
+
+        "Abt_Descriptiom":"Meu nome é Marcelo,",
+       "Abt_Descriptiom2":"and I am the founder of the Brazilian Hands Cooperative. My vision in creating this cooperative was to directly connect qualified workers with clients who need home services. Through our platform, we aim to provide a solution that benefits both parties: clients receive high-quality services, while our workers have the opportunity to earn income and develop their skills.",
+        "Abt_TittleWhoUs":"Quem Somos?",
+        "Abt_WhoUs": "A Brazilian Hands Cooperative é uma iniciativa que visa proporcionar serviços domiciliares de alta qualidade, ao mesmo tempo em que oferece oportunidades de renda para a comunidade. Com uma equipe dedicada e treinada, nosso objetivo é atender às necessidades de nossos clientes, promovendo um ambiente mais limpo, bonito e acolhedor.",
+        "Abt_TittleWhyUs": "Por que escolher a Brazilian Hands Cooperative?",
+        "Abt_WhyUs":"Profissionalismo: Nossos membros são treinados e comprometidos com a excelência, garantindo serviços de alta qualidade em todas as áreas. Comunidade: Valorizamos a união e o apoio mútuo entre os brasileiros na Irlanda. Preços Acessíveis: A qualidade não precisa ser cara. Oferecemos serviços competitivos.", 
+       
+        "Abt_TittleOffer":"Na Brazilian Hands Cooperative, acreditamos no potencial de cada pessoa. Oferecemos:",
+        "Abt_Offer1":"Training:", 
+        "Abt_Offer1.1":"Training to develop skills in various areas, preparing employees for the job market.", 
+
+        "Abt_Offer2":"Flexibilidade:",
+        "Abt_Offer2.2":"Oportunidades de trabalho que se adaptam à rotina de nossos colaboradores, permitindo que eles se dediquem a outras atividades.",
+
+        "Abt_Offer3":"Renda Extra:",
+        "Abt_Offer3.3":"Ao fazer parte da nossa cooperativa, as pessoas podem gerar uma renda significativa, contribuindo para o sustento de suas famílias.",
+        
+        "Srv_Tittle":"Descubra Serviços de Confiança e Qualidade!",
+        "Srv_Subtittle":"A Brazilian Hands Cooperative é a escolha ideal para quem busca soluções de excelência com profissionais experientes e dedicados. Transforme sua casa com nossos serviços de alta qualidade:",
+
+        "Srv_ServiceOne":"Limpeza Residencial",
+        "Srv_ServiceSubOne":"Deixe a limpeza pesada conosco! Oferecemos serviços semanais ou faxinas completas para um lar impecável.",
+
+        "Srv_ServiceTwo":"Manutenção de Jardim",
+        "Srv_ServiceSubTwo":"Mantenha seu jardim sempre bonito! Nossos jardineiros cuidam de poda, adubação e controle de pragas.",
+
+        "Srv_ServiceTree":"Unhas e Estética",
+        "Srv_ServiceSubTree":"Relaxe com nossas manicures e pedicures, garantindo unhas impecáveis e cuidados especiais.",
+
+        "Srv_ServiceFour":"Pintura",
+        "Srv_ServiceSubFour":"Dê vida nova aos seus ambientes com cores vibrantes. Nossos pintores fazem projetos personalizados com excelência.",
+    
+        "Srv_ServiceFive":"Costura e Reparos",
+        "Srv_ServiceSubFive":"Precisa ajustar uma roupa ou fazer pequenos consertos? Nossas costureiras são rápidas e eficientes.",
+
+        "Srv_ServiceSix":"E muito mais",
+        "Srv_ServiceSubSix":"Para algum serviço que não esteja listado, especifique no formulário"
     }
 }

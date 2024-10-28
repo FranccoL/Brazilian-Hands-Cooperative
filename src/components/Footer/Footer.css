@@ -47,7 +47,7 @@ footer a, footer p {
 }
 
 footer a:hover {
-    color: #009440;
+    color: #000000;
 }
 
 .social-links a {
@@ -76,4 +76,13 @@ footer a:hover {
     background-color: #FEE455;
     color: black;
 
+}
+
+.btAdmin{
+    text-decoration: underline; 
+    cursor: pointer; 
+    color: #000000;
+    background: none;
+    border: none;
+    font-size: 20px;
 }

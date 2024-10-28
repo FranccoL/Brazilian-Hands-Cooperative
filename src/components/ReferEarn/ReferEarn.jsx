@@ -12,10 +12,12 @@ function ReferEarn (){
 
     return (
         <div className="container">
-        <div className="titleReferEarn">
+        <div className="all-title">
             <h1>{t("Refer_Earn")}</h1>
-            <h2 >{t("Sub_RE")}</h2>
+            <h2>{t("Sub_RE")}</h2>
         </div>
+       
+        
         <div className="imageRefer">
             <img src={Refer} height={700}/>
             <div className="textOverlay d-flex">

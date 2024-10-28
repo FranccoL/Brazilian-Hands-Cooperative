@@ -43,12 +43,13 @@ function Footer (){
                                 <li><Link to="/about">{t("Lk_About")}</Link></li>
                                 <li><Link to="/services">{t("Lk_Services")}</Link></li>
                             </ul>
-                            <Button className="btfooter" >< Link to="workWithUs"> {t("Ft_Bt")}</Link></Button>
+                            <Link to="workWithUs"><button className="btheader"> {t("Ft_Bt")}</button></Link>
                         </div>
                         <div className="footer-col">
                             <h3>{t("Ft_Contact")}</h3>
                             <p>brazilianhandscooperative@gmail.com</p>
                             <p>(+353) 833471038</p>
+                            <Link to="/"><button className="btAdmin"> {t("Área Admin")}</button></Link>
                             </div>
                             </div>
                             </div>

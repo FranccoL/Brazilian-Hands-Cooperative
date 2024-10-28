@@ -1,18 +1,11 @@
-.titleReferEarn{
-    text-align: center;
-    margin-top: 50px;
-}
 
-.titleReferEarn h1{
-    font-size: 64px;
-    color: #291288;
-    margin-bottom: 20px;
-}
-
-.titleReferEarn h2 {
+.all-title h2 {
     font-size: 32px;
     font-weight: 300;
     margin-bottom: 50px;
+    font-family:"Tajawal";
+    color: black;
+    
 }
 
 .instructions h3{

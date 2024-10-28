@@ -1,17 +1,23 @@
+import{ useState} from 'react'
 import { Link } from 'react-router-dom'
-import Button from '../Button/Button'
 import './Header.css'
 
 //Translation
 import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
 
+//COMPONENTS
+import Button from '../Button/Button'
 
 //ASSETS
 import Logo from '../../assets/loogo.svg'
 
 
 function Header (){
+    const [isOpen, setIsOpen] = useState(false)
+    const toggleMenu = () => {
+        setIsOpen(!isOpen)
+    } 
     const { t } = useTranslation();
 
 
@@ -21,11 +27,19 @@ function Header (){
                 <div className="al-center d-flex ">
                     <Link to="/"><img src={Logo}/></Link>
                     <h1>Brazilian Hands Cooperative</h1>
-                    <nav>
+                    <div className="mobile-menu">
+                        <Button buttonStyle="primary close-btn" onClick={toggleMenu}>
+                            Menu
+                        </Button>
+                    </div>
+                    <nav className={`${isOpen ? 'open' : ''}`}>
+                        <Button buttonStyle="unstyled" className="mobile-menu close-btn" onClick={toggleMenu}>
+                            X
+                        </Button>
                     <ul className="d-flex">
                         
                         <li><Link to="/">{t("Lk_Home")}</Link></li>
-                        <li><Link to="/about">{t("Lk_About")}</Link></li> 
+                        <li className="abt-ql"><Link to="/about">{t("Lk_About")}</Link></li> 
                         <li><Link to="/services">{t("Lk_Services")}</Link></li>
                          
                     </ul>

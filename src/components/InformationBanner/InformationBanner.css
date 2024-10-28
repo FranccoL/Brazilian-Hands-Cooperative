@@ -1,12 +1,12 @@
 .information{
     height: 188px;
-    background-color: #009440;
+    background-color: #BBDDC7;
     margin-bottom: 80px;
 }
 
 .information h1{
     font-size: 30px;
-    color: #FFFFFF;
+    color: #000000;
     opacity: 50%;
     margin-top: 30px;
     display: inline-block;

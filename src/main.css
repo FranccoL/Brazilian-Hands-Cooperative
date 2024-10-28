@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
 
 body{
     margin: 0;
@@ -8,7 +9,28 @@ body{
     background-color: #FFFFFF;
     padding: 0;
 }
-
+.all-title{
+    font-family: "Syne";
+    font-size: 30px;
+    color:#291288;
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 60px;
+}
+.icon-tittle{
+    font-family: "Syne";
+    font-size: 25px;
+    color:#291288;
+    margin-top: -170px;
+    margin-left: 120px;
+}
+.icon-description{
+    font-family: "Syne";
+    font-size: 20px;
+    color: black;
+    margin-top: -120px;
+    padding-top: 38px;
+}
 a {
     text-decoration: none;
     color: white;   
@@ -59,7 +81,7 @@ a {
     width: 100%;
     max-width: 1140px;
     position: relative;
-    padding: 0 30px;
+    
 }
 .al-center{
     align-items: center;

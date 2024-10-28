@@ -1,0 +1,88 @@
+.cardAbout{
+    border: black 2px;
+    background-color: #291288;
+    width: 1150px;
+    height: 350px;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 50px;
+    
+}
+.pictureMarcelo{
+    margin-left: 30px;
+    border-radius: 10px;
+    margin-right: -550px;
+
+}
+
+.descriptionMarcelo{
+    border-radius: 10px;
+    border: black 2px solid;
+    width: 800px;
+    height: 300px;
+    margin-right: 30px;
+    background-color: #F7F2FA;
+}
+.descriptionMarcelo h1{
+    margin-left: 30px;
+    font-family: "Tajawal";
+    font-size: 30px;
+}
+.descriptionMarcelo h2{
+    margin-left: 30px;
+    font-family: "Tajawal";
+    font-size: 20px;
+    font-weight: 400;
+}
+.cardWhy {
+    background-color: #F7F2FA;
+    width: 1480px;
+    margin-left: -170px;
+   
+}
+
+.description-whyUs{
+    margin-left: 170px;
+    margin-right: 170px;
+   
+}
+
+.container-backgroundAbout{
+    margin-left: -169px;
+    margin-top: 80px;
+    position: relative;
+    
+}
+
+.textAbout{
+    position: absolute;
+    top: 20%;
+    left: 15%;
+}
+
+.textAbout h1 {
+    font-size: 35px;
+    width: 1200px;
+    font-family: "Syne";
+    color: #291288;
+}
+.textAbout h2 {
+    font-size: 50px;
+    font-family: "Tajawal";
+    color: black;
+    margin-left: 40px;
+    font-weight: 400;
+    padding-top: 50px;
+    
+}
+
+.textAbout p {
+    font-size: 30px;
+    font-family: "Tajawal";
+    color: black;
+    margin-left: 40px;
+    font-weight: 400;
+    padding-top: 50px;
+    
+}

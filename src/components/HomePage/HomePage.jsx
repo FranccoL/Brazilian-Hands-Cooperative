@@ -26,7 +26,7 @@ function HomePage() {
             <h2>{t("Nosso_Compromisso")}</h2>
             <p>{t("Hp_Sub_Title")}</p>
             <Link>
-            <Button buttonStyle="primary" onClick={() => scrollToSection('secao1')}>
+            <Button buttonStyle="primary btHp" onClick={() => scrollToSection('secao1')}>
             {t("Hp_Bt")}
             </Button>
             </Link>

@@ -9,6 +9,7 @@ import How3 from '../../assets/how3.svg'
 import Num1 from '../../assets/num1.svg'
 import Num2 from '../../assets/num2.svg'
 import Num3 from '../../assets/num3.svg'
+import howIsDo from '../../assets/howIsDo.svg'
 
 
 
@@ -17,14 +18,12 @@ function HowItWorks() {
     return (
         
         <div className="container"> 
-        <div className="title-howWorks">
-            <h1>{t("How_it_Work")}</h1> 
-
+        <div className="all-title">
+            <h1 >{t("How_it_Work")}</h1> 
+            </div>
             <div className="d-flex jc-space-between">
                 <div className="hows">
-                <img src={How1}height="200px" />
-                <img src={How2}height="200px" />
-                <img src={How3}height="200px" />
+                <img src={howIsDo} height="600px"/>
                 </div>
            
             <div className="iluNumbs">
@@ -45,7 +44,7 @@ function HowItWorks() {
             </div> 
 
 
-        </div>
+        
         </div>
             
         

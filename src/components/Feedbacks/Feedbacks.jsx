@@ -8,7 +8,7 @@ function Feedbacks(){
 
     return(
         <div className="container">
-            <div className="titleReviews">
+            <div className="all-title">
                 <h1>{t("Reviews")}</h1>
             </div>
         </div>
