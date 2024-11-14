@@ -25,3 +25,17 @@
 .imageRefer{
     margin-left: -80px;
 }
+
+@media (max-width: 450px) {
+    .all-title h1{
+        font-size: 30px;
+        margin-bottom: 20px;
+       }
+   .all-title h2{
+    font-size: 20px;
+   }
+   .imageRefer {
+    display: none;
+   }
+}
+  

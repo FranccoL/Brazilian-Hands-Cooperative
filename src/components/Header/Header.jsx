@@ -24,7 +24,7 @@ function Header (){
     return (
         <header className="secondary-background">
             <div className="container">
-                <div className="al-center d-flex ">
+                <div className="al-center d-flex hdImg">
                     <Link to="/"><img src={Logo}/></Link>
                     <h1>Brazilian Hands Cooperative</h1>
                     <div className="mobile-menu">

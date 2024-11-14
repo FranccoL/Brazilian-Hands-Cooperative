@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 
 function CardClient() {
     const { t } = useTranslation();
+    
 
     return (
         <div className="container d-flex fd-column">
@@ -15,7 +16,7 @@ function CardClient() {
             
             <h1>{t("Request")}</h1>
             
-            <div className="card2 d-flex ">
+            
                 <form >
                     <div className="d-flex form-group fd-column profile">
                         <input className="form-input"
@@ -39,32 +40,32 @@ function CardClient() {
                         <option value="option4">Painting</option>
                         <option value="option5">Sewing</option>
                     </select>
-                    <input className="d-flex form-input2 "
+                    <textarea className="d-flex form-input "
                         type="text"
                         id="describe"
                         name="name"
                         placeholder="Please describe the specifics of the service you require.*"                       
                         />
-                        <input className="d-flex form-input2"
+                        <input className="d-flex form-input"
                         type="text"
                         id="eircode"
                         name="name"
                         placeholder="Eircode *"                       
                         />
-                        <input className="d-flex form-input2"
+                        <input className="d-flex form-input"
                         type="text"
                         id="recommendation"
                         name="name"
                         placeholder="Recommendation *"                       
                         />
-                        
+                        <Button className="btform" type="submite" buttonStyle='primary'>
+                        Request
+                    </Button>
                     
 
                     </div>
                      
-                    <Button className="btform" type="submite" buttonStyle='primary'>
-                        Request
-                    </Button>
+                    
                     
                     </form>
                      
@@ -72,7 +73,7 @@ function CardClient() {
                     <h2 className="discount">{t("10_Discount")}</h2> 
 
         </div>              
-        </div>
+        
         
         
     )

@@ -1,3 +1,4 @@
+import Carousel from '../Carousel/Carousel';
 import './Feedbacks.css'
 
 //Translation
@@ -7,11 +8,7 @@ function Feedbacks(){
     const { t } = useTranslation();
 
     return(
-        <div className="container">
-            <div className="all-title">
-                <h1>{t("Reviews")}</h1>
-            </div>
-        </div>
+      <></>
     )
 }
 

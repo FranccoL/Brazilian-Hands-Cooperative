@@ -1,16 +1,20 @@
+
+
 .containerJoin {
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
+    
 }
 
 .titleJoin {
     width: 100%;
     justify-content: center;
+    font-family: "Syne";
 }
 
 .titleJoin h1 {
-    font-family: tajawal;
+    font-family: "Tajawal";
     font-size: 50px;
     color: #009440;
     margin-top: 60px;
@@ -21,7 +25,7 @@
 }
 
 .textJoin p {
-    font-family: jost;
+    font-family: "Tajawal";
     font-size: 27px;
     font-weight: 400;
     line-height: 33px;

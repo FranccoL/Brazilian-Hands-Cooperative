@@ -7,7 +7,7 @@ body{
     font-family: "Tajawal";
     font-weight: 400; 
     background-color: #FFFFFF;
-    padding: 0;
+    
 }
 .all-title{
     font-family: "Syne";
@@ -109,11 +109,8 @@ a {
     justify-content: space-between;
 }
 
-@media (max-width: 768px){
-    .container{
-        width: 90%;
+@media (max-width: 450px) {
+    .alltitle h1{
+     font-size: 20px;
     }
-    .mobile-fd-column {
-        flex-direction: column;
-    }
-}
+ }
