@@ -17,7 +17,7 @@ import { useTranslation } from 'react-i18next';
 import Garden from '../../assets/garden.svg'
 import Nails from '../../assets/nails.svg'
 import Sewing from '../../assets/sewing.svg'
-import Painting from '../../assets/Painting.svg'
+import Painting from '../../assets/painting.svg'
 import Cleaning from '../../assets/cleaning.svg'
 
 function Carousel() {
