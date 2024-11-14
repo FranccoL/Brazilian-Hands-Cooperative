@@ -1,5 +1,4 @@
-
-import React from 'react';
+import './PgServices.css'
 import { useTranslation } from 'react-i18next';
 
 
@@ -9,7 +8,7 @@ function PgServices () {
 
     return (
         <div className="container">
-        <div className="all-title">
+        <div className="all-title ttSrv">
             <h1>
             {t("Srv_Tittle")}
             </h1>

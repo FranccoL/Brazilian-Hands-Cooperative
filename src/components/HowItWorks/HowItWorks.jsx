@@ -1,11 +1,8 @@
 import './HowItWorks.css'
 import { useTranslation } from 'react-i18next';
-import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
+
 
 /*ASSENTS */
-import How1 from '../../assets/how1.svg'
-import How2 from '../../assets/how2.svg'
-import How3 from '../../assets/how3.svg'
 import Num1 from '../../assets/num1.svg'
 import Num2 from '../../assets/num2.svg'
 import Num3 from '../../assets/num3.svg'

@@ -29,7 +29,7 @@ function Carousel() {
             <h1 className="all-title">{t("Title_Carousel")}</h1>
             <Swiper
             effect={'coverflow'}
-            grabCursoe={ true }
+            grabCursor={ true }
             centeredSlides={true}
             loop={true}
             slidesPerView={'auto'}

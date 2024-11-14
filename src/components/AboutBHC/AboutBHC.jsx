@@ -31,7 +31,6 @@ function CardMarcelo(){
                     </h2>
                 </div>
             </div>
-           
             <div className="all-title">
             <h1> {t("Abt_TittleWhoUs")} </h1>
             <h2 className="Abt_WhoUs">
@@ -40,7 +39,7 @@ function CardMarcelo(){
         </div>
 
         <div className="cardWhy al-center d-flex">
-        <div className="all-title">
+        <div className="all-title ttWhyUs">
         <h1>{t("Abt_TittleWhyUs")}</h1>
         <h2 className="description-whyUs">{t("Abt_WhyUs")}</h2>
             </div>

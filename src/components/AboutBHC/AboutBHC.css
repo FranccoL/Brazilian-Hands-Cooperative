@@ -86,3 +86,45 @@
     padding-top: 50px;
     
 }
+
+@media (max-width: 450px) {
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .pictureMarcelo{
+        display: none;
+    }
+    .cardAbout{
+        width: 380px;
+        margin-left: 20px;
+        height: 500px;
+    }
+    .descriptionMarcelo{
+        margin-left: 20px;
+        height: 400px;
+        margin-top: 50px;
+    }
+    .cardWhy{
+        width: 600px;
+    }
+    .ttWhyUs h1{
+        width: 500px;
+        font-size: 20px;
+        margin-left: 130px;
+    }
+    .description-whyUs{
+        width: 400px;
+        
+    }
+    .ttWhoUs{
+        font-size: 20px;
+    }
+    .container-backgroundAbout{
+        display: none;
+    }
+
+    
+
+ }

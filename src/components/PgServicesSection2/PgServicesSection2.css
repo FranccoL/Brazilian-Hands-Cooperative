@@ -30,3 +30,8 @@
     
 }
 
+@media (max-width: 450px) {
+    .imgSection2{
+     display: none;
+    }
+ }

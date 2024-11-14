@@ -1,6 +1,6 @@
 import './CardClient.css'
 import Button from '../Button/Button'
-import React, { useState } from 'react';
+
 
 //Translation
 import { useTranslation } from 'react-i18next';
@@ -15,7 +15,7 @@ function CardClient() {
         <div className="card primary-background " id="secao1">
             
             <h1>{t("Request")}</h1>
-            
+            <h2 className="discount">{t("10_Discount")}</h2> 
             
                 <form >
                     <div className="d-flex form-group fd-column profile">
@@ -32,8 +32,8 @@ function CardClient() {
                         name="name"
                         placeholder="Phone Number *"                       
                         />
-                        <label class="form-select"> Choose the service *</label>
-                    <select class="custom-select">
+                        <label className="form-select"> Choose the service *</label>
+                    <select className="custom-select">
                         <option value="option1">Cleaning </option>
                         <option value="option2">Garden</option>
                         <option value="option3">Nails</option>
@@ -70,7 +70,7 @@ function CardClient() {
                     </form>
                      
                     </div>
-                    <h2 className="discount">{t("10_Discount")}</h2> 
+                    
 
         </div>              
         

@@ -12,22 +12,22 @@ function FormWork() {
                         <div className="formFormWork">
                             <p>
                             <label>Whats your Name?</label><br/><br/>
-                            <input type="text" required name="nome" rols="80">
+                            <input type="text" required name="nome">
                             </input>
                             </p>
                             <p>
                             <label>Enter your email.</label><br/><br/>
-                            <input type="text" required name="nome" rols="80">
+                            <input type="text" required name="nome">
                             </input>
                             </p>
                             <p>
                             <label>Enter your mobile number.</label><br/><br/>
-                            <input type="text" required name="nome" rols="80">
+                            <input type="text" required name="nome">
                             </input>
                             </p>
                             <p>
                             <label>Eircode*</label><br/><br/>
-                            <input type="text" required name="eircode" rols="80">
+                            <input type="text" required name="eircode">
                             </input>
                             </p>
                         </div>

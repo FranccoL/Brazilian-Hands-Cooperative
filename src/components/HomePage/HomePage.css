@@ -54,7 +54,8 @@
     position: absolute;
     left: 0.1%; 
     z-index: 1;
-    margin-top: -300px;
+    top: 380px;
+    
 }
 
 
@@ -89,8 +90,9 @@
 
 .homepage h1 {
     font-size: 32px; 
-    margin-bottom: 350px;
+    margin-top:50px;
     margin-right:150px;
+    width: 200px; 
 }
 
 .homepage h2 {
@@ -112,8 +114,10 @@
     width: 200px;
     height: 50px;
     font-size: 15px;
-    top: 45%;
+    top: 60%;
     margin-right: 20px;
+    right: 30px;
+    
 }
 
     

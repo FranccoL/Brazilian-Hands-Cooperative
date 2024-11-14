@@ -34,7 +34,7 @@ function Header (){
                     </div>
                     <nav className={`${isOpen ? 'open' : ''}`}>
                         <Button buttonStyle="unstyled" className="mobile-menu close-btn" onClick={toggleMenu}>
-                            X
+                            X   
                         </Button>
                     <ul className="d-flex">
                         
