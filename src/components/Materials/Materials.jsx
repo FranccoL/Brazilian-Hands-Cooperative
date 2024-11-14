@@ -1,11 +1,11 @@
 import './Materials.css'
 
 //images logos
-import cleaning from '../../images/cleaning.svg'
-import garden from '../../images/garden.svg'
-import beauty from '../../images/beauty.svg'
-import painting from '../../images/painting.svg'
-import sewing from '../../images/sewing.svg'
+import cleaning from '../../../public/assets/images/cleaning.svg'
+import garden from '../../../public/assets/images/garden.svg'
+import beauty from '../../../public/assets/images/beauty.svg'
+import painting from '../../../public/assets/images/painting.svg'
+import sewing from '../../../public/assets/images/sewing.svg'
 
 function Materials() {
     return (

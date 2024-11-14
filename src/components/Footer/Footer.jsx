@@ -1,16 +1,14 @@
 import { Link } from 'react-router-dom'
 import './Footer.css'
-import Button from '../Button/Button'
+
 import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
 
 //ASSETS
-import Logo from '../../assets/loogo.svg'
-import Brazil from '../../assets/brazil.svg'
-import Irland from '../../assets/irland.svg'
-import Face from '../../assets/facebook.svg'
-import Instagram from '../../assets/instagram.svg'
-import WhatsApp from '../../assets/whatsApp.svg'
+import Logo from '../../../public/assets/loogo.svg'
+import Face from '../../../public/assets/facebook.svg'
+import Instagram from '../../../public/assets/instagram.svg'
+import WhatsApp from '../../../public/assets/whatsApp.svg'
 
 function Footer (){
     const { t } = useTranslation();

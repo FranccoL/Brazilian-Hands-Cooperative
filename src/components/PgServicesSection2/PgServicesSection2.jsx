@@ -4,13 +4,13 @@ import { useTranslation } from 'react-i18next';
 
 
 //ASSENTS
-import imgSection2 from "../../assets/servicesSection2.svg"
-import IconClean from "../../assets/IconClean.svg"
-import IconGard from "../../assets/IconGard.svg"
-import IconNails from "../../assets/IconNails.svg"
-import IconPaint from "../../assets/IconPaint.svg"
-import IconSew from "../../assets/IconSew.svg"
-import IconPlus from "../../assets/IconPlus.svg"
+import imgSection2 from '../../../public/assets/servicesSection2.svg'
+import IconClean from '../../../public/assets/IconClean.svg'
+import IconGard from '../../../public/assets/IconGard.svg'
+import IconNails from '../../../public/assets/IconNails.svg'
+import IconPaint from '../../../public/assets/IconPaint.svg'
+import IconSew from '../../../public/assets/IconSew.svg'
+import IconPlus from '../../../public/assets/IconPlus.svg'
 
 
 

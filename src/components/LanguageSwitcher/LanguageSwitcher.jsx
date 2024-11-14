@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import Brazil from '../../assets/brazil.svg';
-import Irland from '../../assets/irland.svg';
+import Brazil from '../../../public/assets/brazil.svg';
+import Irland from '../../../public/assets/irland.svg';
 import './LanguageSwitcher.css'
 
 const languageOptions = [

@@ -1,7 +1,7 @@
 import './ReferEarn.css'
 
 //ASSETS
-import Refer from '../../assets/refer.svg'
+import Refer from '../../../public/assets/refer.svg'
 
 //Translation
 import { useTranslation } from 'react-i18next';

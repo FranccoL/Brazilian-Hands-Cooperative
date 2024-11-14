@@ -1,5 +1,5 @@
 import './Join.css'
-import collaborator from '../../images/imagecom.svg'
+import collaborator from '../../../public/assents/imagecom.svg'
 
 
 function Join() {

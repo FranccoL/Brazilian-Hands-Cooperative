@@ -14,11 +14,11 @@ import { useTranslation } from 'react-i18next';
 
 
 //ASSETS
-import Garden from '../../assets/garden.svg'
-import Nails from '../../assets/nails.svg'
-import Sewing from '../../assets/sewing.svg'
-import Painting from '../../assets/painting.svg'
-import Cleaning from '../../assets/cleaning.svg'
+import Garden from '../../../public/assets/garden.svg'
+import Nails from '../../../public/assets/nails.svg'
+import Sewing from '../../../public/assets/sewing.svg'
+import Painting from '../../../public/assets/painting.svg'
+import Cleaning from '../../../public/assets/cleaning.svg'
 
 function Carousel() {
     const { t } = useTranslation();

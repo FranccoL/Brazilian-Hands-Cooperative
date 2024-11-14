@@ -3,8 +3,8 @@ import './AboutBHC.css'
 
 
 //ASSENTS
-import AboutUs from '../../assets/aboutUs.svg'
-import Profile from '../../assets/profile.svg'
+import AboutUs from '../../../public/assets/aboutUs.svg'
+import Profile from '../../../public/assets/profile.svg'
 
 import { useTranslation } from 'react-i18next';
 

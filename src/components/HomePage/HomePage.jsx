@@ -2,10 +2,10 @@ import './HomePage.css'
 import Button from '../Button/Button'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next';
-import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
 
-import Banner from '../../assets/banner.svg'
-import BannerMobile from '../../assets/bannerMobile.svg'
+
+import Banner from '../../../public/assets/banner.svg'
+import BannerMobile from '../../../public/assets/bannerMobile.svg'
 
 function HomePage() {
 
@@ -23,8 +23,8 @@ function HomePage() {
    
         <div className="homepage d-flex fd-column ">
             
-            <img src={Banner} alt="Desktop" className="desktop-image" />
-            <img src={BannerMobile} alt="Mobile" className="mobile-image" />
+            <img src={Banner} alt="Banner" className="desktop-image" />
+            <img src={BannerMobile} alt="BannerMobile" className="mobile-image" />
             
             <h1>{t("Sua_Casa")} </h1>
             <h2>{t("Nosso_Compromisso")}</h2>

@@ -3,10 +3,10 @@ import { useTranslation } from 'react-i18next';
 
 
 /*ASSENTS */
-import Num1 from '../../assets/num1.svg'
-import Num2 from '../../assets/num2.svg'
-import Num3 from '../../assets/num3.svg'
-import howIsDo from '../../assets/howIsDo.svg'
+import Num1 from '../../../public/assets/num1.svg'
+import Num2 from '../../../public/assets/num2.svg'
+import Num3 from '../../../public/assets/num3.svg'
+import howIsDo from '../../../public/assets/howIsDo.svg'
 
 
 

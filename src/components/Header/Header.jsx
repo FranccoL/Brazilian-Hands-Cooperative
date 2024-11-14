@@ -10,7 +10,7 @@ import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
 import Button from '../Button/Button'
 
 //ASSETS
-import Logo from '../../assets/loogo.svg'
+import Logo from '../../../public/assets/loogo.svg'
 
 
 function Header (){
