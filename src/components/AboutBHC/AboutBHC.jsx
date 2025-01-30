@@ -41,17 +41,7 @@ function CardMarcelo(){
 
         <div className="container-backgroundAbout">
         <img src="/AboutUs.svg" width={1500} />
-            <div className="textAbout">
-                <h1>{t("Abt_TittleOffer")}</h1>
-                <h2>{t("Abt_Offer1")}</h2>
-                   <p>{t("Abt_Offer1.1")}</p>
-                
-                <h2>{t("Abt_Offer2")}</h2>
-                   <p>{t("Abt_Offer2.2")}</p>
-                
-                <h2>{t("Abt_Offer3")}</h2>
-                   <p>{t("Abt_Offer3.3")}</p>
-            </div>
+            
         </div>
         </div>
     )

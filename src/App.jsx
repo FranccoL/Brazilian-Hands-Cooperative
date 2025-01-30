@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './i18n/index';
-import './i18n'; // Certifique-se de que você importou a configuração do i18next
+import './i18n'; 
 
 
 
