@@ -1,11 +1,5 @@
 import './Materials.css'
 
-//images logos
-import cleaning from '../../../public/assets/images/cleaning.svg'
-import garden from '../../../public/assets/images/garden.svg'
-import beauty from '../../../public/assets/images/beauty.svg'
-import painting from '../../../public/assets/images/painting.svg'
-import sewing from '../../../public/assets/images/sewing.svg'
 
 function Materials() {
     return (
@@ -19,7 +13,7 @@ function Materials() {
             </div>
             <div id="firstMaterials">
                 <div className="logos">
-                        <img src={cleaning}></img>
+                        <img src="/cleaning.svg"></img>
                         <p>
                             <ul>
                                 <li>Small shovel</li>
@@ -31,7 +25,7 @@ function Materials() {
                         </p>
                 </div>
                 <div className="logos">
-                <img src={garden}></img>
+                <img src="/garden.svg"></img>
                     <p>
                         <ul>
                             <li>Small shovel</li>
@@ -43,7 +37,7 @@ function Materials() {
                     </p>
                 </div>
                 <div className="logos">
-                <img src={beauty}></img>
+                <img src="/beauty.svg"></img>
                     <p>
                         <ul>
                             <li>Small shovel</li>
@@ -57,7 +51,7 @@ function Materials() {
             </div>
             <div className="otherMaterials">
         <       div className="logos">
-                    <img src={painting}></img>
+                    <img src="/painting.svg"></img>
                     <p>
                         <ul>
                             <li>Small shovel</li>
@@ -69,7 +63,7 @@ function Materials() {
                     </p>
                 </div>
                 <div className="logos">
-                    <img src={sewing}></img>
+                    <img src="/sewing.svg"></img>
                     <p>
                         <ul>
                             <li>Small shovel</li>

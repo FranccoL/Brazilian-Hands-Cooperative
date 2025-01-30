@@ -1,5 +1,4 @@
 import './Join.css'
-import collaborator from '../../../public/assents/imagecom.svg'
 
 
 function Join() {
@@ -32,7 +31,7 @@ function Join() {
                 </p>
             </div>
             <div className="imageJoin">
-                <img src={collaborator}></img>
+                <img src="/imagecom.svg"></img>
             </div>
     
         </div>

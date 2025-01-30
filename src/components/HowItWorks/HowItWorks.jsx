@@ -2,14 +2,6 @@ import './HowItWorks.css'
 import { useTranslation } from 'react-i18next';
 
 
-/*ASSENTS */
-import Num1 from '../../../public/assets/num1.svg'
-import Num2 from '../../../public/assets/num2.svg'
-import Num3 from '../../../public/assets/num3.svg'
-import howIsDo from '../../../public/assets/howIsDo.svg'
-
-
-
 function HowItWorks() {
     const { t } = useTranslation();
     return (
@@ -20,13 +12,13 @@ function HowItWorks() {
             </div>
             <div className="d-flex jc-space-between">
                 <div className="hows">
-                <img src={howIsDo} height="600px"/>
+                <img src="/howIsDo.svg" height="600px"/>
                 </div>
            
             <div className="iluNumbs">
-            <img src={Num1} height="70px" />
-            <img src={Num2} height="70px"/>
-            <img src={Num3} height="70px"/>
+            <img src="/num1.svg" height="70px" />
+            <img src="/num2.svg" height="70px"/>
+            <img src="/num3.svg" height="70px"/>
             </div>
 
             <div className="description">

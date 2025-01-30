@@ -1,14 +1,8 @@
 import { Link } from 'react-router-dom'
 import './Footer.css'
-
 import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
 
-//ASSETS
-import Logo from '../../../public/assets/loogo.svg'
-import Face from '../../../public/assets/facebook.svg'
-import Instagram from '../../../public/assets/instagram.svg'
-import WhatsApp from '../../../public/assets/whatsApp.svg'
 
 function Footer (){
     const { t } = useTranslation();
@@ -19,17 +13,17 @@ function Footer (){
             <div className="container">
                 <div className="d-flex jc-space-between">
                     <div className="footer-logo-col">
-                        <img src={Logo} className="footer-logo" />
+                        <img src="/loogo.svg" className="footer-logo" />
                         <p>{t("Ft_SubTitle")}</p>
                         <div className="d-flex social-links">
                             <a href="https://www.facebook.com/profile.php?id=61563594075044" target="_blank">
-                                <img src={Face} height="50px"/>
+                                <img src="/facebook.svg" height="50px"/>
                             </a>
                             <a href="https://www.instagram.com/brazilianhandsco?igsh=MWR0aGRob3QwazZreA==" target="_blank">
-                                <img src={Instagram} height="50px"/>
+                                <img src="/instagram.svg" height="50px"/>
                             </a>
                             <a href="https://api.whatsapp.com/send/?phone=%2B353833471038&text&type=phone_number&app_absent=0" target="_blank">
-                                <img src={WhatsApp} height="50px"/>
+                                <img src="/whatsApp.svg" height="50px"/>
                             </a>
                         </div>
                     </div>

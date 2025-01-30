@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next';
 
 
-import Banner from '../../../public/assets/banner.svg'
-import BannerMobile from '../../../public/assets/bannerMobile.svg'
-
 function HomePage() {
 
     
@@ -23,8 +20,8 @@ function HomePage() {
    
         <div className="homepage d-flex fd-column ">
             
-            <img src={Banner} alt="Banner" className="desktop-image" />
-            <img src={BannerMobile} alt="BannerMobile" className="mobile-image" />
+            <img src="/banner.svg" alt="Banner" className="desktop-image" />
+            <img src="/bannerMobile.svg" alt="BannerMobile" className="mobile-image" />
             
             <h1>{t("Sua_Casa")} </h1>
             <h2>{t("Nosso_Compromisso")}</h2>

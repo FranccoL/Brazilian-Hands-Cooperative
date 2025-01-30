@@ -9,8 +9,6 @@ import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
 //COMPONENTS
 import Button from '../Button/Button'
 
-//ASSETS
-import Logo from '../../../public/assets/loogo.svg'
 
 
 function Header (){
@@ -25,7 +23,7 @@ function Header (){
         <header className="secondary-background">
             <div className="container">
                 <div className="al-center d-flex hdImg">
-                    <Link to="/"><img src={Logo}/></Link>
+                    <Link to="/"><img src="/loogo.svg"/></Link>
                     <h1>Brazilian Hands Cooperative</h1>
                     <div className="mobile-menu">
                         <Button buttonStyle="primary close-btn" onClick={toggleMenu}>

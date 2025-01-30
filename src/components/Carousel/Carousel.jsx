@@ -13,13 +13,6 @@ import {EffectCoverflow, Pagination, Navigation} from 'swiper/modules';
 import { useTranslation } from 'react-i18next';
 
 
-//ASSETS
-import Garden from '../../../public/assets/garden.svg'
-import Nails from '../../../public/assets/nails.svg'
-import Sewing from '../../../public/assets/sewing.svg'
-import Painting from '../../../public/assets/painting.svg'
-import Cleaning from '../../../public/assets/cleaning.svg'
-
 function Carousel() {
     const { t } = useTranslation();
 
@@ -49,23 +42,23 @@ function Carousel() {
             className='swiper_container'
             >
                 <SwiperSlide>
-                    <img src={Cleaning} alt="slide-image" />
+                    <img src="/cleaning.svg" alt="slide-image" />
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <img src={Nails} alt="slide-image" />
+                    <img src="/nails.svg" alt="slide-image" />
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <img src={Sewing} alt="slide-image" />
+                    <img src="/sewing.svg" alt="slide-image" />
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <img src={Painting} alt="slide-image" />
+                    <img src="/painting.svg" alt="slide-image" />
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <img src={Garden} alt="slide-image" />
+                    <img src="/cleaning.svg" alt="slide-image" />
                 </SwiperSlide>
 
                 <div className="slider-container">

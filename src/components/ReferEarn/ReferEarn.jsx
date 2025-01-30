@@ -1,7 +1,5 @@
 import './ReferEarn.css'
 
-//ASSETS
-import Refer from '../../../public/assets/refer.svg'
 
 //Translation
 import { useTranslation } from 'react-i18next';
@@ -19,7 +17,7 @@ function ReferEarn (){
        
         
         <div className="imageRefer">
-            <img src={Refer} height={700}/>
+            <img src="/refer.svg" height={700}/>
             <div className="textOverlay d-flex">
             {t("RE_One")}<br/>
             <br/>{t("RE_Two")}<br/>

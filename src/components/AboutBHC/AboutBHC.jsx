@@ -1,11 +1,5 @@
 import './AboutBHC.css'
 
-
-
-//ASSENTS
-import AboutUs from '../../../public/assets/aboutUs.svg'
-import Profile from '../../../public/assets/profile.svg'
-
 import { useTranslation } from 'react-i18next';
 
 
@@ -20,7 +14,7 @@ function CardMarcelo(){
         <div className="container ">
             <div className="cardAbout d-flex jc-space-between">
                 <div className="pictureMarcelo">
-                    <img src={Profile} height={300}/>
+                    <img src="/profile.svg" height={300}/>
                 </div>
                 <div className="descriptionMarcelo">
                     <h1>
@@ -46,7 +40,7 @@ function CardMarcelo(){
         </div>
 
         <div className="container-backgroundAbout">
-        <img src={AboutUs} width={1500} />
+        <img src="/AboutUs.svg" width={1500} />
             <div className="textAbout">
                 <h1>{t("Abt_TittleOffer")}</h1>
                 <h2>{t("Abt_Offer1")}</h2>
