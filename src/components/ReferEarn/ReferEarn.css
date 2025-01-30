@@ -1,0 +1,41 @@
+
+.all-title h2 {
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 50px;
+    font-family:"Tajawal";
+    color: black;
+    
+}
+
+.instructions h3{
+    font-size: 35px;
+}
+
+.textOverlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%, -20%);
+    color: white;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 30px;
+}
+.imageRefer{
+    margin-left: -80px;
+}
+
+@media (max-width: 450px) {
+    .all-title h1{
+        font-size: 30px;
+        margin-bottom: 20px;
+       }
+   .all-title h2{
+    font-size: 20px;
+   }
+   .imageRefer {
+    display: none;
+   }
+}
+  

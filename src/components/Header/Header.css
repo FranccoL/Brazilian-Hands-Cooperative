@@ -1,0 +1,233 @@
+header {
+    padding: 10px 0;
+}
+
+header ul, li {
+    list-style: none;
+    margin-left: 20px;
+    
+}
+header h1{
+    color: white;
+    width: 200px;
+    text-align: center;
+    white-space: nowrap;
+    margin-left: 10px;
+}
+
+
+nav {
+    display: flex;
+}
+
+nav a {
+    
+    font-size: 20px;
+    text-decoration: none;
+    margin-right: 30px;
+    color: rgb(251, 251, 251);
+    
+}
+nav ul{
+    margin-left: 250px;
+    
+   
+}
+.abt-ql{
+    white-space: nowrap;
+}
+nav a:hover{
+    color: #000000;
+}
+
+.btheader {
+    
+    background-color: #e3c932;
+    width: 220px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: black;
+    border-radius: 30px ;
+    border: solid black 1px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.btheader:hover {
+    
+    background-color: #dfe21d;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+.mobile-menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    nav.open{
+        display: flex;
+        align-items: end;
+    }
+
+    nav {
+        background-color: #291288;
+        border-left: 10px solid #333;
+        display: none;
+        flex-direction: column;
+        height: 100%;
+        padding: 37px;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 60vw;
+        z-index: 1;
+        box-shadow: -40vw 0px 0px 0px rgba(0,0,0,0.75);
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        
+    }
+
+
+    nav ul li {
+        display: flex;
+        
+        
+    }
+    header h1{
+        overflow: hidden;
+    }
+
+    nav a {
+        border-bottom: 1px solid rgb(255, 255, 255);
+        color: white;
+        font-size: 20px;
+        margin: 0 0 20px 0;
+        padding: 12px;
+        text-decoration: none;
+        width: 100%;
+        
+    }
+    .mobile-menu {
+        display: block;
+    }
+
+    .close-btn {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 25px;
+        margin: 0 0 15px;
+        padding: 12px;
+        width: fit-content;
+        cursor: pointer;
+        width: 100px;
+    }
+    .btheader{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 450px) {
+    nav.open {
+        display: flex; 
+        flex-direction: column; 
+        align-items: flex-start;
+        height: 100vh;
+        top: 0;
+        z-index: 2;
+    }
+
+    
+    nav {
+        background-color: #291288;
+        border-left: 10px solid #333;
+        display: none;
+        flex-direction: column; 
+        height: 100%; 
+        padding: 20px; 
+        position: fixed; 
+        right: 0; 
+        top: 0; 
+        width: 80vw; 
+        z-index: 1; 
+        box-shadow: -40vw 0px 0px 0px rgba(0,0,0,0.75);
+    }
+
+    
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0; 
+    }
+
+    
+    nav ul li {
+        display: flex; 
+    }
+
+    
+    nav a {
+        border-bottom: 1px solid rgb(255, 255, 255); 
+        color: white; 
+        font-size: 18px; 
+        margin: 10px 0; 
+        padding: 10px; 
+        text-decoration: none; 
+        width: 100%; 
+    }
+
+    
+    .mobile-menu {
+        display: relative; 
+        margin-left: 30px;
+    }
+
+    
+    .close-btn {
+        background: none; 
+        border: none; 
+        color: white; 
+        font-size: 25px;
+        margin: 0 0 12px; 
+        padding: 10px; 
+        cursor: pointer; 
+        margin-left: 20px;
+        
+    }
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Cor do fundo com opacidade */
+        z-index: 0; /* Coloca o overlay atrás do menu */
+    }
+
+    
+    .btheader {
+        display: none; 
+    }
+    
+    .language_switcher {
+        display: none !important;
+        
+    }
+    .hdImg{
+        margin-left: 20px;
+    }
+    .hdImg h1{
+        display: none;
+    }
+}

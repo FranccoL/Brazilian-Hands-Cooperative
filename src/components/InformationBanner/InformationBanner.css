@@ -1,0 +1,21 @@
+.information{
+    height: 188px;
+    background-color: #BBDDC7;
+    margin-bottom: 80px;
+}
+
+.information h1{
+    font-size: 30px;
+    color: #000000;
+    opacity: 50%;
+    margin-top: 30px;
+    display: inline-block;
+    margin-right: 300px;
+    margin-left: 100px;
+}
+
+@media (max-width: 450px) {
+   .information{
+    display: none !important;
+   }
+}

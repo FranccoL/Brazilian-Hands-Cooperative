@@ -1,0 +1,82 @@
+{
+    "translation": {
+        
+        "Sua_Casa": "Your Home,",
+        "Nosso_Compromisso": "Our Commitment!",
+        "Hp_Sub_Title": "Talented professionals making your home more beatiful and your life easier with various services",
+        "Hp_Bt":"Get your quote",
+        
+
+        "How_it_Work":"HOW DOES IT WORK?",
+        "Item_One":"Choose the Room:",
+        "Sub_One":"Report the space that needs attention. Whether it's the living room, kitchen, bathroom, or bedrooms, we take care of every detail.",
+        "Item_Two":"Define the type of service:",
+        "Sub_Two":"Choose from our options: general cleaning, nails, painting, sewing, and gardening. We tailor our services to meet your specific needs.",
+        "Item_Tree":"Easy Scheduling:",
+        "Sub_Tree":"Schedule your cleaning in just a few clicks! Choose the date and time that best fit your routine, and leave the rest to us.",
+
+        "Request":"Request your free quote now!",
+        "10_Discount":"On your first quote, you GET a 10% DISCOUNT!",
+        "Request_Name":"Name *",
+
+
+        "Title_Carousel":"DISCOVER OUR SERVICES",
+
+        "Refer_Earn":"REFER AND EARN!",
+        "Sub_RE":"How about getting a discount while helping your friends keep their homes clean and organized? By referring our cleaning services, you and your referral will receive a 10% discount on your next service.",
+        "RE_One":"1. Refer a friend who hasn't used our services yet.When they complete their first cleaning service, both of you will receive a 10% discount on your next cleaning!",
+        "RE_Two":"2. It's an easy way to take care of your home and save money!",
+        "RE_Tree":"Contact us for more details and start referring today!",
+
+        "Reviews":"Reviews",
+
+        "Ft_SubTitle":"We take care of your cleaning, you take care of your comfort!",
+        "Title_Lk":"Pages",
+        "Lk_Home":"Home",
+        "Lk_About":"About",
+        "Lk_Services":"Services",
+        "Ft_Bt":"Work With Us",
+        "Ft_Contact":"Contact",
+
+        
+        "Abt_Descriptiom":"My name is Marcelo,",
+        "Abt_Descriptiom2":"and I am the founder of the Brazilian Hands Cooperative. My vision in creating this cooperative was to directly connect qualified workers with clients who need home services. Through our platform, we aim to provide a solution that benefits both parties: clients receive high-quality services, while our workers have the opportunity to earn income and develop their skills.",
+        "Abt_TittleWhoUs":"Who We Are?",
+        "Abt_WhoUs": "The Brazilian Hands Cooperative is an initiative aimed at providing high-quality home services while offering income opportunities for the community. With a dedicated and trained team, our goal is to meet the needs of our clients, promoting a cleaner, more beautiful, and welcoming environment.",
+        "Abt_TittleWhyUs": "Why choose the Brazilian Hands Cooperative?",
+        "Abt_WhyUs":"Professionalism: Our members are trained and committed to excellence, ensuring high-quality services in all areas.Community: We value unity and mutual support among Brazilians in Ireland. Affordable Prices: Quality doesn’t have to be expensive. We offer competitive services.",
+        "Abt_TittleOffer":"At Brazilian Hands Cooperative, we believe in the potential of each individual. We offer:",
+        "Abt_Offer1":"Training:", 
+        "Abt_Offer1.1":"Training to develop skills in various areas, preparing employees for the job market.", 
+
+        "Abt_Offer2":"Flexibility",
+        "Abt_Offer2.2":"Job opportunities that adapt to our employees' routines, allowing them to engage in other activities.",
+
+        "Abt_Offer3":"Extra Income",
+        "Abt_Offer3.3":"By joining our cooperative, individuals can earn a significant income, contributing to the support of their families.",
+        
+
+
+
+        "Srv_Tittle":"Discover Trusted and Quality Services!",
+        "Srv_Subtittle":"The Brazilian Hands Cooperative is the ideal choice for those seeking excellent solutions with experienced and dedicated professionals. Transform your home with our high-quality services:",
+
+        "Srv_ServiceOne":"Residential Cleaning",
+        "Srv_ServiceSubOne":"Leave the heavy cleaning to us! We offer weekly services or complete cleanings for a spotless home.",
+
+        "Srv_ServiceTwo":"Garden Maintenance",
+        "Srv_ServiceSubTwo":"Keep your garden looking beautiful! Our gardeners handle pruning, fertilization, and pest control.",
+
+        "Srv_ServiceTree":"Nails and Aesthetics",   
+        "Srv_ServiceSubTree":"Relax with our manicures and pedicures, ensuring flawless nails and special care.",
+
+        "Srv_ServiceFour":"Painting",
+        "Srv_ServiceSubFour":"Give new life to your spaces with vibrant colors. Our painters create custom projects with excellence.",
+    
+        "Srv_ServiceFive":"Sewing and Repairs",
+        "Srv_ServiceSubFive":"Need to alter a garment or make small repairs? Our seamstresses are quick and efficient.",
+
+        "Srv_ServiceSix":"And much more",
+        "Srv_ServiceSubSix":"For any service not listed, please specify in the form."
+    }
+}

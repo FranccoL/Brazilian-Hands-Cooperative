@@ -1,0 +1,27 @@
+.language_switcher{
+    display: flex;
+    gap: 20px;
+}
+
+
+.language_switcher span {
+    text-indent: -9999px;   
+}
+
+
+
+.language_switcher > Button{
+    cursor: pointer;
+    background: none;
+    border: solid 2px;
+    border-radius: 50%;
+    width: 31px;
+    height: 31px;
+    padding: 1px;
+    
+}
+.language_switcher > Button:hover{
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    
+}
+

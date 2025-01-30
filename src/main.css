@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Tajawal";
+    font-weight: 400; 
+    background-color: #FFFFFF;
+    
+}
+.all-title{
+    font-family: "Syne";
+    font-size: 30px;
+    color:#291288;
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 60px;
+}
+.icon-tittle{
+    font-family: "Syne";
+    font-size: 25px;
+    color:#291288;
+    margin-top: -170px;
+    margin-left: 120px;
+}
+.icon-description{
+    font-family: "Syne";
+    font-size: 20px;
+    color: black;
+    margin-top: -120px;
+    padding-top: 38px;
+}
+a {
+    text-decoration: none;
+    color: white;   
+}
+
+/* MAIN COLOR */
+.primary-background {
+    background-color: #291288;   
+}
+.primary-color{
+    color: #291288;
+}
+.secondary-background{
+    background-color: #009440;
+}
+.secondary-color{
+    color:#009440;
+}
+.tertiary-background{
+    background-color: #E8ECF5;
+}
+.tertiary-color{
+    color: #E8ECF5;
+}
+
+/* FORM */
+
+.form-input {
+    border: none;
+    border-bottom: 1px solid #292F36;
+    color: #292F36;
+    font-size: 22px;
+    padding: 0 0 13px 0;
+    outline:none;
+    width: 100%;
+    font-size: 15px;
+    line-height: 30px;
+    margin-left: 15px;
+}
+.form-input::placeholder {
+    color: #292F36;
+    opacity: 1;
+}
+
+/* GRID */
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1140px;
+    position: relative;
+    
+}
+.al-center{
+    align-items: center;
+}
+.al-end {
+    align-items: end;
+}
+.d-flex{
+    display: flex;
+}
+
+.fd-column {
+    flex-direction: column;
+}
+.jc-start{     /* alinhar e distribuir espaço entre os itens em um contêiner flexível*/
+    justify-content: start;
+}
+.jc-center {                
+    justify-content: center;
+}
+.jc-end {
+    justify-content: end;
+}
+.jc-space-between { /* Distribui os itens de modo que o primeiro fique no início e o último no final, com espaço igual entre os itens.*/
+    justify-content: space-between;
+}
+
+@media (max-width: 450px) {
+    .alltitle h1{
+     font-size: 20px;
+    }
+ }

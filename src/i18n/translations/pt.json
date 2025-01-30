@@ -1,0 +1,81 @@
+{
+    "translation": {
+        "Sua_Casa": "Sua Casa,",
+        "Nosso_Compromisso": "Nosso Compromisso!",
+        "Hp_Sub_Title": "Profissionais talentosos tornando sua casa mais bela e sua vida mais fácil com diversos serviços",
+        "Hp_Bt":"Faça seu orçamento",
+
+
+        "How_it_Work":"COMO FUNCIONA?",
+        "Item_One":"Escolha um cômodo:",
+        "Sub_One":"Informe o ambiente que precisa de atenção. Seja a sala, cozinha, banheiro ou quartos, nós cuidamos de cada detalhe.",
+        "Item_Two":"Defina o tipo de serviço:",
+        "Sub_Two":"Escolha entre nossas opções: limpeza geral, unhas, pintura, costura e jardim. Nós adaptamos nossos serviços para atender suas necessidades específicas.",
+        "Item_Tree":"Agendamento Fácil:",
+        "Sub_Tree":"Programe sua limpeza em poucos cliques! Selecione a data e horário que melhor se encaixam na sua rotina e deixe o resto conosco.",
+
+        "Request":"Solicite seu orçamento grátis agora!",
+        "10_Discount":" No seu primeiro orçamento, você GANHA 10% DE DESCONTO!",
+        
+
+
+
+        "Title_Carousel":"CONHEÇA NOSSOS SERVIÇOS",
+
+        "Refer_Earn":"INDIQUE E GANHE!",
+        "Sub_RE":"Que tal ganhar um desconto enquanto ajuda amigos a manterem suas casas limpas e organizadas? Ao indicar nossos serviços de faxina, você e seu indicado ganham 10% de desconto no próximo serviço",
+        "RE_One":"1. Indique um amigo que ainda não usou nossos serviços. Quando ele completar seu primeiro serviço de limpeza, ambos receberão um desconto de 10% na próxima limpeza!",
+        "RE_Two":"2. Quando ele realizar o primeiro serviço de faxina, ambos receberão 10% de desconto na próxima limpeza!",
+        "RE_Tree":" Entre em contato para mais detalhes e comece a indicar hoje mesmo!",
+
+        "Reviews":"Avaliações",
+
+        "Ft_SubTitle":"Cuidamos da sua limpeza, você cuida do seu conforto!",
+
+        "Title_Lk":"Páginas",
+        "Lk_Home":"Inicio",
+        "Lk_About":"Sobre nós",
+        "Lk_Services":"Serviços",
+        "Ft_Bt":"Trabalhe Conosco",
+        "Ft_Contact":"Contatos",
+
+
+        "Abt_Descriptiom":"Meu nome é Marcelo,",
+       "Abt_Descriptiom2":"E eu sou o fundador da Brazilian Hands Cooperative. Minha visão ao criar esta cooperativa foi conectar diretamente trabalhadores qualificados a clientes que precisam de serviços domiciliares. Através da nossa plataforma, buscamos oferecer uma solução que beneficia ambas as partes: os clientes recebem serviços de alta qualidade, enquanto nossos trabalhadores têm a oportunidade de gerar renda e desenvolver suas habilidades.",
+        "Abt_TittleWhoUs":"Quem Somos?",
+        "Abt_WhoUs": "A Brazilian Hands Cooperative é uma iniciativa que visa proporcionar serviços domiciliares de alta qualidade, ao mesmo tempo em que oferece oportunidades de renda para a comunidade. Com uma equipe dedicada e treinada, nosso objetivo é atender às necessidades de nossos clientes, promovendo um ambiente mais limpo, bonito e acolhedor.",
+        "Abt_TittleWhyUs": "Por que escolher a Brazilian Hands Cooperative?",
+        "Abt_WhyUs":"Profissionalismo: Nossos membros são treinados e comprometidos com a excelência, garantindo serviços de alta qualidade em todas as áreas. Comunidade: Valorizamos a união e o apoio mútuo entre os brasileiros na Irlanda. Preços Acessíveis: A qualidade não precisa ser cara. Oferecemos serviços competitivos.", 
+       
+        "Abt_TittleOffer":"Na Brazilian Hands Cooperative, acreditamos no potencial de cada pessoa. Oferecemos:",
+        "Abt_Offer1":"Treinamento:", 
+        "Abt_Offer1.1":"Treinamentos para desenvolver habilidades em diversas áreas, preparando os colaboradores para o mercado de trabalho.", 
+
+        "Abt_Offer2":"Flexibilidade:",
+        "Abt_Offer2.2":"Oportunidades de trabalho que se adaptam à rotina de nossos colaboradores, permitindo que eles se dediquem a outras atividades.",
+
+        "Abt_Offer3":"Renda Extra:",
+        "Abt_Offer3.3":"Ao fazer parte da nossa cooperativa, as pessoas podem gerar uma renda significativa, contribuindo para o sustento de suas famílias.",
+        
+        "Srv_Tittle":"Descubra Serviços de Confiança e Qualidade!",
+        "Srv_Subtittle":"A Brazilian Hands Cooperative é a escolha ideal para quem busca soluções de excelência com profissionais experientes e dedicados. Transforme sua casa com nossos serviços de alta qualidade:",
+
+        "Srv_ServiceOne":"Limpeza Residencial",
+        "Srv_ServiceSubOne":"Deixe a limpeza pesada conosco! Oferecemos serviços semanais ou faxinas completas para um lar impecável.",
+
+        "Srv_ServiceTwo":"Manutenção de Jardim",
+        "Srv_ServiceSubTwo":"Mantenha seu jardim sempre bonito! Nossos jardineiros cuidam de poda, adubação e controle de pragas.",
+
+        "Srv_ServiceTree":"Unhas e Estética",
+        "Srv_ServiceSubTree":"Relaxe com nossas manicures e pedicures, garantindo unhas impecáveis e cuidados especiais.",
+
+        "Srv_ServiceFour":"Pintura",
+        "Srv_ServiceSubFour":"Dê vida nova aos seus ambientes com cores vibrantes. Nossos pintores fazem projetos personalizados com excelência.",
+    
+        "Srv_ServiceFive":"Costura e Reparos",
+        "Srv_ServiceSubFive":"Precisa ajustar uma roupa ou fazer pequenos consertos? Nossas costureiras são rápidas e eficientes.",
+
+        "Srv_ServiceSix":"E muito mais",
+        "Srv_ServiceSubSix":"Para algum serviço que não esteja listado, especifique no formulário"
+    }
+}
